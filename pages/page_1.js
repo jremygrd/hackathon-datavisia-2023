@@ -13,7 +13,7 @@ const Page_1 = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div
-      className={`overflow-auto flex flex-col max-h-[20rem] min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
+      className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col max-h-[20rem] min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
     >
       <PageChanger currentPage="Présentation" prevPage="/" nextPage="page_2" />
 
@@ -95,7 +95,7 @@ const Page_1 = () => {
 
       <div className="flex flex-col bg-white/40 rounded-lg mt-4 shadow-lg p-4 w-[90vw] md:w-[70vw] lg:w-[60vw]">
 
-        <div className="flex flex-wrap gap-y-2 justify-between items-center  md:flex-row md:space-x-4">
+        <div className="flex flex-wrap gap-y-2 gap-x-[0.05rem] md:gap-x-4 justify-between items-center md:flex-row">
           <div
             onClick={() => setSelected("Songs")}
             className={`px-4 py-2 rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
