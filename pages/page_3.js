@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Links from "../components/Links";
+import PageChanger from '../components/PageChanger';
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import BarGraph from "../components/bar_csv";
@@ -43,9 +43,9 @@ const Page_2 = () => {
 
   return (
     <div
-      className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[2vw] px-16 ${inter.className}`}
+      className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1w]${inter.className}`}
     >
-      <Links selected={"page_3"} />
+      <PageChanger currentPage="Présentation" prevPage="page_2" nextPage={null} />
       <div class="flex h-[80vh] w-full">
         <div class="flex flex-col w-1/3">
           <div class="m-4 p-4 bg-red-200 rounded-lg flex-shrink">

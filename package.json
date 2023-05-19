@@ -11,9 +11,12 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.1",
+    "@react-spring/web": "^9.7.2",
     "autoprefixer": "10.4.14",
     "chart.js": "^4.3.0",
+    "echarts": "^5.4.2",
     "echarts-for-react": "^3.0.2",
     "framer-motion": "^10.12.7",
     "next": "13.3.4",

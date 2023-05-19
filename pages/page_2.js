@@ -1,17 +1,18 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Links from "../components/Links";
+import PageChanger from '../components/PageChanger';
 import BarGraph from "../components/bar_csv";
 import React, { useState } from "react";
+import RadarChart from "@/components/RadarChart";
 
 const inter = Inter({ subsets: ["latin"] });
 const Page_2 = () => {
   const [stateVariable, setStateVariable] = useState(false);
   return (
     <div
-      className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[2vw] px-16 ${inter.className}`}
+      className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
     >
-      <Links selected={"page_2"}/>
+      <PageChanger currentPage="Présentation" prevPage="page_1" nextPage="page_3" />
 
       <div className="p-6 rounded-lg backdrop-blur-xl bg-white/70 h-[19rem]">
         <div
@@ -35,6 +36,8 @@ const Page_2 = () => {
           </div>
         </div>
       </div>
+
+      <RadarChart/>
 
       <div className="container m-4">
         <p>
