@@ -6,7 +6,7 @@ const Card = ({children}) => {
 
   return (
     <animated.div
-      className="shadow-lg cursor-pointer"
+      className=""
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{
@@ -20,7 +20,7 @@ const Card = ({children}) => {
 
 function calc(x, y) {
   return [
-    -(y - window.innerHeight / 2) / 30,
+    -(y - window.innerHeight / 2) / 80,
     -(x - window.innerWidth / 2) / 40,
     1.05,
   ];
