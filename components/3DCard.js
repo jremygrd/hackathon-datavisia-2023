@@ -2,7 +2,7 @@ import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 const Card = ({children}) => {
-  const [style, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 4, tension: 450, friction: 20 } }));
+  const [style, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 6, tension: 650, friction: 16 } }));
 
   return (
     <animated.div

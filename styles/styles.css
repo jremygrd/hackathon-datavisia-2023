@@ -201,3 +201,10 @@ nav ul li {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+  font-family: 'Indie Flower', cursive;
+}

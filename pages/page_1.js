@@ -18,7 +18,7 @@ const Page_1 = () => {
 
   return (
     <div
-      className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col max-h-[20rem] min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
+      className={`shadow-lg overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col max-h-[20rem] min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
     >
       <PageChanger currentPage="Présentation" prevPage="" nextPage="page_2" />
 
@@ -136,7 +136,7 @@ const Page_1 = () => {
         </div>
         <div className="flex flex-row gap-x-4 overflow-x-auto p-4">
         <div className="transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-105">
-        <div className="h-40 w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative">
+        <div className="h-40 w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
           <div className="flex flex-row space-x-2 items-center">
             <MusicNoteIcon fontSize="medium" style={{ color: "white" }} />
             <p className="text-white text-sm whitespace-nowrap overflow-auto">Come as you are</p>

@@ -4,13 +4,15 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import Link from 'next/link';
 import Visualizer from './MusicBar';
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 export default function PageChanger({ currentPage, prevPage, nextPage }) {
     const [isDisabledPrev, setIsDisabledPrev] = React.useState(prevPage == null); // or some other condition
     const [isDisabledNext, setIsDisabledNext] = React.useState(nextPage == null); // or some other condition
     
     return (
-        <div className="flex flex-col items-center justify-center bg-black bg-opacity-30 rounded-full p-4 px-10 mt-2 mb-8 relative shadow-lg">
+        <div className={`flex flex-col items-center justify-center bg-black bg-opacity-30 rounded-full p-4 px-10 mt-2 mb-8 relative shadow-lg ${inter.className}`}>
             <div className="flex items-center justify-between w-full">
                 {
                     isDisabledPrev ?
