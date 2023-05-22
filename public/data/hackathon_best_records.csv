@@ -1,63 +1,65 @@
-Year,Artist,ID Artist,Work,City,US State of birth,Country of birth
-1959,Henry Mancini,386,The Music from Peter Gunn,Cleveland,Ohio,USA
-1960,Frank Sinatra,335,Come Dance with Me!,Hoboken,New Jersey,USA
-1961,Bob Newhart,129,The Button-Down Mind of Bob Newhart,Oak Park,Illinois,USA
-1962,Judy Garland,463,Judy at Carnegie Hall,Grand Rapids,Minnesota,USA
-1963,Vaughn Meader,981,The First Family,Waterville,Maine,USA
-1964,Barbra Streisand,90,The Barbra Streisand Album,New York City,New York,USA
-1965,Stan Getz,850,Getz/Gilberto,Philadelphian,Pennsylvania,USA
-1966,Frank Sinatra,335,September of My Years,Hoboken,New Jersey,USA
-1967,Frank Sinatra,335,A Man and His Music,Hoboken,New Jersey,USA
-1968,The Beatles,882,Sgt. Pepper's Lonely Hearts Club Band,Liverpool,N/A,UK
-1969,Glen Campbell,364,By the Time I Get to Phoenix,Delight,Arkansas,USA
-1970,"Blood, Sweat and Tears",122,"Blood, Sweat & Tears",New York City,New York,USA
-1971,Simon and Garfunkel,833,Bridge over Troubled Water,New York City,New York,USA
-1972,Carole King,168,Tapestry,New York City,New York,USA
-1973,George Harrison,355,The Concert for Bangladesh,Liverpool,N/A,UK
-1974,Stevie Wonder,857,Innervisions,Saginaw,Michigan,USA
-1975,Stevie Wonder,857,Fulfillingness' First Finale,Saginaw,Michigan,USA
-1976,Paul Simon,710,Still Crazy After All These Years,Newark,New Jersey,USA
-1977,Stevie Wonder,857,Songs in the Key of Life,Saginaw,Michigan,USA
-1978,Fleetwood Mac,323,Rumours,London,N/A,UK
-1979,Barry Gibb,91,Saturday Night Fever: The Original Movie Sound Track,Douglas,N/A,Isle of Man
-1980,Billy Joel,110,52nd Street,New York City,New York,USA
-1981,Christopher Cross,196,Christopher Cross,San Antonio,Texas,USA
-1982,John Lennon,452,Double Fantasy,Liverpool,N/A,UK
-,Yoko Ono,1005,,Tokyo,N/A,Japan
-1983,Toto,953,Toto IV,Orange,Texas,USA
-1984,Michael Jackson,616,Thriller,Gary,Indiana,USA
-1985,Lionel Richie,549,Can't Slow Down,Tuskegee,Alabama,USA
-1986,Phil Collins,720,No Jacket Required,London,N/A,UK
-1987,Paul Simon,710,Graceland,Newark,New Jersey,USA
-1988,U2,972,The Joshua Tree,Dublin,N/A,Ireland
-1989,George Michael,356,Faith,London,N/A,UK
-1990,Bonnie Raitt,139,Nick of Time,Burbank,California,USA
-1991,Quincy Jones,742,Back on the Block,Chicago,Illinois,USA
-1992,Natalie Cole,650,Unforgettable... with Love,Los Angeles,California,USA
-1993,Eric Clapton,296,Unplugged,Ripley,N/A,UK
-1994,Whitney Houston,990,The Bodyguard: Original Soundtrack Album,Newark,New Jersey,USA
-1995,Tony Bennett,950,MTV Unplugged,New York City,New York,USA
-1996,Alanis Morissette,27,Jagged Little Pill,Ottowa,N/A,Canada
-1997,Celine Dion,174,Falling into You,Charlemagne,N/A,Canada
-1998,Bob Dylan,127,Time Out of Mind,Duluth,Minnesota,USA
-1999,Lauryn Hill,521,The Miseducation of Lauryn Hill,East Orange,New Jersey,USA
-2000,Santana,796,Supernatural,San Francisco,California,USA
-2001,Steely Dan,852,Two Against Nature,Annandale-on-Hudson,New York,USA
-2002,Various artists Produced by T Bone Burnett,980,"O Brother, Where Art Thou?soundtrack",St Louis,Missouri,USA
-2003,Norah Jones,677,Come Away with Me,New York City,New York,USA
-2004,OutKast,697,Speakerboxxx/The Love Below,East Point,Georgia,USA
-2005,Ray Charles,750,Genius Loves Company,Albany,Georgia,USA
-2006,U2,972,How to Dismantle an Atomic Bomb,Dublin,N/A,Ireland
-2007,Dixie Chicks,251,Taking the Long Way,Dallas,Texas,USA
-2008,Herbie Hancock,388,River: The Joni Letters,Chicago,Illinois,USA
-2009,Robert Plant,767,Raising Sand,West Bromwich,N/A,UK
-,Alison Krauss,40,,Decatur,Illinois,USA
-2010,Taylor Swift,875,Fearless,Reading,Pennsylvania,USA
-2011,Arcade Fire,54,The Suburbs,Montreal,N/A,Canada
-2012,Adele,18,21,London,N/A,UK
-2013,Mumford and Sons,640,Babel,London,N/A,UK
-2014,Daft Punk,217,Random Access Memories,Paris,N/A,France
-2015,Beck,99,Morning Phase,Los Angeles,California,USA
-2016,Taylor Swift,875,1989,Reading,Pennsylvania,USA
-2017,Adele,18,25,London,N/A,UK
-2018,Bruno Mars,149,24K Magic,Honolulu,Hawaii,USA
+Year;Record;Artist;ID Artist;Genre,
+1959;Nel Blu Dipinto Di Blu (Volare);Domenico Modugno;263;Balad,
+1960;Mack the Knife;Bobby Darin;131;Jazz,
+1961;Theme from A Summer Place;Percy Faith;716;Easy Listening,
+1962;Moon River;Henry Mancini;386;Traditional Pop,
+1963;I Left My Heart in San Francisco;Tony Bennett;950;Traditional Pop,
+1964;Days of Wine and Roses;Henry Mancini;386;Easy Listening,
+1965;The Girl from Ipanema;Stan Getz;850;Jazz,
+1966;A Taste of Honey;Herb Alpert;387;Jazz,
+1967;Strangers in the Night;Frank Sinatra;335;Jazz,
+1968;Up, Up and Away;The 5th Dimension;877;Soul
+1969;Mrs. Robinson;Simon and Garfunkel;833;Folk Rock,
+1970;Aquarius / Let the Sunshine In;The 5th Dimension;877;Soul,
+1971;Bridge Over Troubled Water;Simon and Garfunkel;833;Rock,
+1972;It's Too Late;Carole King;168;Rock,
+1973;The First Time Ever I Saw Your Face;Roberta Flack;768;Soul,
+1974;Killing Me Softly with His Song;Roberta Flack;768;Soul,
+1975;I Honestly Love You;Olivia Newton John;687;Rock,
+1976;Love Will Keep Us Together;Captain and Tennille;162;Pop,
+1977;This Masquerade;George Benson;354;R&B,
+1978;Hotel California;The Eagles;893;Rock,
+1979;Just the Way You Are;Billy Joel;110;Rock,
+1980;What a Fool Believes;The Doobie Brothers;889;Rock,
+1981;Sailing;Christopher Cross;196;Rock,
+1982;Bette Davis Eyes;Kim Carnes;501;Rock,
+1983;Rosanna;Toto;953;Rock,
+1984;Beat It;Michael Jackson;616;Rock,
+1985;What's Love Got to Do with It;Tina Turner;939;R&B,
+1986;We are the World;USA for Africa;975;Pop,
+1987;Higher Love;Steve Winwood;856;Rock,
+1988;Graceland;Paul Simon;710;Folk,
+1989;Don't Worry Be Happy;Bobby McFerrin;132;Jazz,
+1990;From a Distance;Bette Midler;103;Pop,
+1991;Another Day in Paradise;Phil Collins;720;Pop,
+1992;Unforgettable;Natalie Cole;650;Traditional Pop,
+1993;Tears in Heaven;Eric Clapton;296;Rock,
+1994;A Whole New World;Peabo Bryson;712;Show Tune,
+1995;All I Wanna Do;Sheryl Crow;823;Rock,
+1996;Kiss from a Rose;Seal;805;Pop,
+1997;Change the World;Eric Clapton;296;Pop,
+1998;Sunny Came Home;Shawn Colvin;818;Rock,
+1999;My Heart Will Go On;Celine Dion;174;Pop,
+2000;Smooth;Santana;796;Rock,
+2001;Beautiful;Christina Aguilera;193;Pop,
+2002;Fallin’;Alicia Keys;38;R&B,
+2003;Don't Know Why;Norah Jones;677;Pop,
+2004;Clocks;Coldplay;203;Rock,
+2005;Here We Go Again;Ray Charles;750;Traditional Pop ,
+2006;Breathe;Faith Hill;307;Country,
+2007;Not Ready to Make Nice;Dixie Chicks;251;Country,
+2008;Rehab;Amy Winehouse;49;Pop,
+2009;Please Read the Letter;Robert Plant;767;Rock,
+2010;Use Somebody;Kings of Leon;502;Rock,
+2011;Need You Now;Lady Antebellum;516;Country,
+2012;Rolling in the Deep;Adele;18;Pop,
+2013;Somebody That I Used to Know;Gotye;369;Pop,
+2014;Get Lucky;Daft Punk;217;Electronica,
+2015;Stay with Me;Sam Smith;791;Pop,
+2016;Uptown Funk;Mark Ronson;596;Pop,
+2017;Hello;Adele;18;Pop,
+2018;24K Magic;Bruno Mars;149;Pop,
+2019;This Is America;Childish Gambino;187;Rap/Hip-Hop,
+2020;Bad Guy;Billie Eilish;109;Pop,
+2021;Everything I Wanted;Billie Eilish;109;Pop,
+2022;Leave the door open;Silk Sonic;832;R&B,

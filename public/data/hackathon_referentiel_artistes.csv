@@ -1,121 +1,1034 @@
-Artist,ID Artist,total,sales,streaming,publishing,touring,year
-Taylor Swift,875,23.8,10,10.6,3.2,0,2020
-Post Malone,733,23.2,0.7125,8.1,2,12.4,2020
-Celine Dion,174,17.5,0.25,0.29,0.024,17,2020
-Eagles,274,16.3,0.97,2.7,1.2,11.4,2020
-Billie Eilish,109,14.7,2.1,5.9,5.7,1,2020
-Drake,267,14.2,0.635,11.7,1.9,0,2020
-Queen,740,13.2,5.3,5.5,2.4,0,2020
-The Beatles,882,12.9,5.2,5.1,2.6,0,2020
-YoungBoy Never Broke Again,1011,11.9,0.126,10,1.7,0.129,2020
-Lil Baby,533,11.7,0.152,9.1,2.2,0.253,2020
-The Weeknd,928,10.4,1.5,7.3,1.6,0,2020
-Aventura,72,10.2,0.014,0.939,0.436,8.8,2020
-AC DC,16,10.1,4,4.3,1.8,0,2020
-Eminem,289,9.7,1.3,6.6,1.8,0,2020
-Lil Uzi Vert,543,9.5,0..89,7.6,1.8,0,2020
-Luke Combs,566,9.2,0.874,5.5,1.8,1,2020
-DaBaby,215,9.1,0.16,7.1,1.5,0.313,2020
-Metallica,613,9,3.7,3.9,1.4,0,2020
-BTS,151,8.9,4.3,3.7,0.967,0,2020
-Pink Floyd,725,8.8,4.3,3.2,1.3,0,2020
-Bad Bunny,86,8.4,0.218,6.8,1.4,0,2020
-Future,342,8.2,0.185,6.4,1.6,0,2020
-Ariana Grande,57,7.5,0.768,6,0.759,0,2020
-Roddy Ricch,773,7.4,0.119,5.7,1.5,0.091,2020
-Rod Wave,772,7.37,0.066,6,1.3,0,2020
-George Strait,357,6.9,0.447,2.1,0.166,4.2,2020
-The Lumineers,901,6.8,0.337,1.3,0.838,4.3,2020
-Blake Shelton,117,6.7,0.592,2.2,0.003,3.9,2020
-Fleetwood Mac,323,6.6,1.8,3.2,1.6,0,2020
-Kanye West,475,6.3,0.8,3.9,1.6,0,2020
-Justin Bieber,467,6.22,1.1,4.7,0.435,0,2020
-Tool,951,6.17,0.557,0.823,0.611,4.2,2020
-Kiss,503,6,0.348,0.431,0.195,5,2020
-The Rolling Stones,912,5.96,1.8,2.97,1.17,0,2020
-Travis Scott,960,5.82,0.485,4.96,0.373,0,2020
-Ed Sheeran,277,5.66,0.395,3.74,1.53,0,2020
-Halsey,382,5.55,0.97,3.48,1.1,0,2020
-Harry Styles,384,5.51,1.84,3.3,0.398,0,2020
-Billy Joel,110,5.49,0.31,1.7,0.986,2.5,2020
-Aerosmith,19,5.35,0.564,1.33,0.84,2.7,2020
-Taylor Swift,875,99.6,1.5,5.67,1.9,90.5,2019
-Bruce Springsteen,148,53,0.499,0.814,0.79,50.9,2019
-Drake,267,52.5,1.6,17.1,3.1,30.7,2019
-Kenny Chesney,487,42.5,1,2.6,0.25,38.6,2019
-Ed Sheeran,277,41.8,1.7,4.8,2.5,32.8,2019
-Eagles,274,37.5,1.2,2.2,1,33.1,2019
-Justin Timberlake,468,37.4,1.4,2.2,0.896,33,2019
-Elton John,285,36.3,0.813,1.5,0.431,33.5,2019
-Billy Joel,110,35.8,0.362,1.4,1,33.05,2019
-Pink,724,35.5,1.2,1.5,1.1,31.7,2019
-Beyonce,104,33.1,0.671,4.2,0.593,27.6,2019
-Bruno Mars,149,32.6,0.99,3.5,0.96,27.2,2019
-Jay Z,434,32.5,1.7,2.9,0.256,27.6,2019
-Luke Bryan,565,23.8,0.849,2.6,0.706,19.7,2019
-Post Malone,733,22.3,1.6,10.4,2.6,7.8,2019
-U2,972,21.4,0.55,0.869,0.61,19.4,2019
-Metallica,613,19.6,4.8,3.4,1.4,9.9,2019
-Maroon 5,597,19.3,0.739,3.8,1.9,12.9,2019
-Journey,461,19.1,0.755,1.5,0.937,15.9,2019
-Trans Siberian Orchestra,956,18.5,0.308,0.333,0.171,17.7,2019
-Imagine Dragons,405,18.2,2,4.3,4.4,7.4,2019
-Def Leppard,234,17.6,0.577,0.673,0.493,15.9,2019
-Foo Fighters,330,17,0.416,0.769,1.2,14.7,2019
-Chris Stapleton,192,16.9,1.83,2.1,0.977,12,2019
-The Rolling Stones,912,16.7,1.2,2.4,0.918,12.1,2019
-Travis Scott,960,16.6,1.1,6.1,0.525,9,2019
-J. Cole,411,16,0.82,4.7,2.3,8.1,2019
-Dead and Company,231,15.47,0.932,0.68,0.37,13.5,2019
-Dave Matthews Band,224,15.1,1.1,0.894,0.751,12.3,2019
-Romeo Santos,776,14.8,0.047,1.5,0.709,12.6,2019
-Twenty One Pilots,966,14.7,1.2,2.5,2.25,8.6,2019
-Jason Aldean,429,14.6,1.5,2.9,0.038,10.1,2019
-Jennifer Lopez,437,14.1,0.831,0.08,0.028,13.4,2019
-Panic At The Disco,702,14.3,1.78,2.7,2.4,7.4,2019
-Keith Urban,482,14,1,1.4,0.765,10.9,2019
-Sam Smith,791,13.8,0.608,2.2,0.631,10.4,2019
-Queen + Adam Lambert,741,13.8,4.6,4.8,1.9,2.5,2019
-Lynyrd Skynyrd,571,12.7,0.904,1.4,0.797,9.6,2019
-XXXTentacion,999,12.1,0.695,9.1,0.237,0,2019
-Shania Twain,817,12,0.275,0.48,0.175,11,2019
-Rolling Stones,775,50.9,2,3.1,1.2,44.5,2021
-Taylor Swift,875,38.7,15.9,19,3.9,0,2021
-Harry Styles,384,36.6,1.9,2.3,0.25,32.2,2021
-Eagles,274,20.1,2,2,3.9,1.3,2021
-Drake,267,23.8,1,20.5,2.2,0,2021
-Chris Stapleton,192,22.1,1.2,3.7,1.2,16,2021
-Dead and Company,231,21.9,1.8,1.2,0.52,18.3,2021
-Olivia Rodrigo,688,20.9,4.5,13.3,3.1,0,2021
-Trans Siberian Orchestra,956,19.2,0.2,0.25,0.14,18.6,2021
-Guns N Roses,376,19.2,0.75,1.3,1,16.1,2021
-BTS,151,19,3.2,3.6,0.9,11.3,2021
-Los Bukis,559,18.1,0.001,0.8,0.38,16.9,2021
-Luke Combs,566,17.1,0.6,5.3,1.6,9.6,2021
-Genesis,353,16.7,0.34,0.51,0.29,15.5,2021
-Jonas Brothers,458,16.4,0.05,1.1,0.79,14.4,2021
-Bruno Mars,149,16.2,0.46,3.8,0.8,11.2,2021
-Kanye West,475,15.8,2.2,12.6,1,0,2021
-Maroon 5,597,15.8,0.26,3.5,1.3,10.8,2021
-Luke Bryan,565,15.2,0.43,2.7,0.67,11.4,2021
-Beatles,98,15,6.4,6.2,2.5,0,2021
-Billie Eilish,109,13.9,3.2,5.4,5.3,0,2021
-James Taylor,424,13.6,0.13,0.94,0.34,12.2,2021
-Jason Aldean,429,13.5,0.23,2.8,0.003,10.4,2021
-Metallica,613,13,5.5,5.2,1.8,0.54,2021
-Queen,740,12.9,5.2,5.6,2.1,0,2021
-J. Cole,411,12.9,1,5.6,1.4,4.9,2021
-Lil Baby,533,11.9,0.16,7.6,1.7,2.4,2021
-Green Day,372,11.8,0.82,1.4,1.2,8.3,2021
-Morgan Wallen,637,11.3,0.94,8,0.76,1.6,2021
-Juice WRLD,464,11.2,0.6,8.8,1.8,0,2021
-Weezer,987,11.1,0.95,1.1,0.78,8.3,2021
-Eric Church,295,10.8,0.67,2.1,0.94,7.1,2021
-Alanis Morissette,27,10.7,0.21,0.33,0.19,10,2021
-Billy Joel,110,10.5,0.68,2.1,0.79,7,2021
-Grupo Firme,375,10.5,0.001,1,0.15,9.3,2021
-YoungBoy Never Broke Again,1011,10.4,0.12,8.9,1.4,0,2021
-Thomas Rhett,934,10.3,0.17,2.4,0.41,7.4,2021
-Zac Brown Band,1013,10.3,0.23,1.6,1,7.4,2021
-Maluma,587,10.2,0.002,1.3,0.81,8.1,2021
-The Weeknd,928,10.1,1.3,7.3,1.6,0,2021
+Artistes;Artistes - nom corrig�;ID
+3LW;3LW;1
+112;112;2
+*NSYNC;NSYNC;680
+2 Chainz;2 Chainz;3
+21 Savage;21 Savage;4
+2Pac;2Pac;5
+3 Doors Down;3 Doors Down;6
+3OH!3;3OH3;7
+5 Seconds of Summer;5 Seconds of Summer;8
+50 Cent;50 Cent;9
+6ix9ine;6ix9ine;10
+99 Souls;99 Souls;11
+A Boogie Wit da Hoodie;A Boogie Wit da Hoodie;12
+A$AP Ferg;ASAP Ferg;61
+A$AP Rocky;ASAP Rocky;62
+A.R. Rahman;A.R. Rahman;13
+A1;A1;14
+Aaliyah;Aaliyah;15
+AC/DC;AC DC;16
+Adam Lambert;Adam Lambert;17
+Adele;Adele;18
+Aerosmith;Aerosmith;19
+Afroman;Afroman;20
+Agnes;Agnes;21
+AJ Tracey;AJ Tracey;22
+AJR;AJR;23
+Akon;Akon;24
+Al Green;Al Green;25
+Alan Walker;Alan Walker;26
+Alanis Morissette;Alanis Morissette;27
+Alec Benjamin;Alec Benjamin;28
+Alesha Dixon;Alesha Dixon;29
+Alessia Cara;Alessia Cara;30
+Alesso;Alesso;31
+Alex & Sierra;Alex and Sierra;32
+Alex Clare;Alex Clare;33
+Alex Gaudino;Alex Gaudino;34
+Alexandra Burke;Alexandra Burke;35
+Alexandra Stan;Alexandra Stan;36
+Alice Deejay;Alice Deejay;37
+Alicia Keys;Alicia Keys;38
+Alien Ant Farm;Alien Ant Farm;39
+Alison Krauss;Alison Krauss;40
+All Saints;All Saints;41
+All Time Low;All Time Low;42
+Aloe Blacc;Aloe Blacc;43
+Alok;Alok;44
+alt-J;alt J;45
+AlunaGeorge;AlunaGeorge;46
+Amanda Perez;Amanda Perez;47
+Amerie;Amerie;48
+Amy Winehouse;Amy Winehouse;49
+Anastacia;Anastacia;50
+Angie Martinez;Angie Martinez;51
+Anne-Marie;Anne Marie;52
+Anuel AA;Anuel AA;53
+Arcade Fire;Arcade Fire;54
+Arctic Monkeys;Arctic Monkeys;55
+Aretha Franklin;Aretha Franklin;56
+Ariana Grande;Ariana Grande;57
+Armand Van Helden;Armand Van Helden;58
+Armin van Buuren;Armin van Buuren;59
+Asaf Avidan & the Mojos;Asaf Avidan and the Mojos;60
+Ashanti;Ashanti;63
+Asher Roth;Asher Roth;64
+Ashlee Simpson;Ashlee Simpson;65
+Ashley O;Ashley O;66
+Astrid S;Astrid S;67
+Atomic Kitten;Atomic Kitten;68
+Audioslave;Audioslave;69
+Ava Max;Ava Max;70
+Avant;Avant;71
+Aventura;Aventura;72
+Avicii;Avicii;73
+Avril Lavigne;Avril Lavigne;74
+AWOLNATION;AWOLNATION;75
+Axwell /\ Ingrosso;Axwell and Ingrosso;76
+Ayo & Teo;Ayo and Teo;77
+Azealia Banks;Azealia Banks;78
+B Young;B Young;79
+B.o.B;B.o.B;80
+B2K;B2K;81
+BØRNS;BORNS;141
+Baauer;Baauer;82
+Baby Bash;Baby Bash;83
+Baby Boy Da Prince;Baby Boy Da Prince;84
+Backstreet Boys;Backstreet Boys;85
+Bad Bunny;Bad Bunny;86
+Bad Meets Evil;Bad Meets Evil;87
+Baha Men;Baha Men;88
+Banx & Ranx;Banx and Ranx;89
+Barbra Streisand;Barbra Streisand;90
+Barry Gibb;Barry Gibb;91
+Basement Jaxx;Basement Jaxx;92
+Basshunter;Basshunter;93
+Bastille;Bastille;94
+Bazzi;Bazzi;95
+Beach Boys;Beach Boys;96
+Beastie Boys;Beastie Boys;97
+Beatles;Beatles;98
+Beck;Beck;99
+Becky G;Becky G;100
+Bellie Eilish;Billie Eilish;109
+Benny Benassi;Benny Benassi;101
+benny blanco;benny blanco;102
+Bette Midler;Bette Midler;103
+Beyoncé;Beyonce;104
+Beyonce;Beyonce;104
+Big Brovaz;Big Brovaz;105
+Big Sean;Big Sean;106
+Big Shaq;Big Shaq;107
+Big Tymers;Big Tymers;108
+Billie Eilish;Billie Eilish;109
+Billy Joel;Billy Joel;110
+Bingo Players;Bingo Players;111
+Birdy;Birdy;112
+Black Eyed Peas;Black Eyed Peas;113
+Black Sabbath;Black Sabbath;114
+blackbear;blackbear;115
+BLACKPINK;BLACKPINK;116
+Blake Shelton;Blake Shelton;117
+Blanco Brown;Blanco Brown;118
+Blazin' Squad;Blazin Squad;119
+blink-182;blink 182;120
+BlocBoy JB;BlocBoy JB;121
+Blood, Sweat & Tears;Blood, Sweat and Tears;122
+Blu Cantrell;Blu Cantrell;123
+Blue;Blue;124
+Blueface;Blueface;125
+Bo Diddley;Bo Diddley;126
+Bob Dylan;Bob Dylan;127
+Bob Marley;Bob Marley;128
+Bob Newhart;Bob Newhart;129
+Bob Sinclar;Bob Sinclar;130
+Bobby Darin;Bobby Darin;131
+Bobby McFerrin;Bobby McFerrin;132
+Bobby Shmurda;Bobby Shmurda;133
+Bobby V.;Bobby V.;134
+Bodyrockers;Bodyrockers;135
+Bomfunk MC's;Bomfunk MC s;136
+Bon Jovi;Bon Jovi;137
+Bone Thugs-N-Harmony;Bone Thugs N Harmony;138
+Bonnie Raitt;Bonnie Raitt;139
+Booker T & The MG's;Booker T and The MG s;140
+Bow Wow;Bow Wow;142
+Boys Like Girls;Boys Like Girls;143
+Brandy;Brandy;144
+Brian McFadden;Brian McFadden;145
+Bridgit Mendler;Bridgit Mendler;146
+Britney Spears;Britney Spears;147
+Bruce Springsteen;Bruce Springsteen;148
+Bruno Mars;Bruno Mars;149
+Bryson Tiller;Bryson Tiller;150
+BTS;BTS;151
+Bubba Sparxxx;Bubba Sparxxx;152
+Buddy Holly;Buddy Holly;153
+Burak Yeter;Burak Yeter;154
+Busta Rhymes;Busta Rhymes;155
+Céline Dion;Celine Dion;174
+Cali Swag District;Cali Swag District;156
+Calvin Harris;Calvin Harris;157
+Cam’ron;CamRon;160
+Camila Cabello;Camila Cabello;158
+Camille Jones;Camille Jones;159
+Capital Cities;Capital Cities;161
+Captain & Tennille;Captain and Tennille;162
+Cardi B;Cardi B;163
+Carl Perkins;Carl Perkins;164
+Carl Thomas;Carl Thomas;165
+Carlos Santana;Carlos Santana;166
+Carly Rae Jepsen;Carly Rae Jepsen;167
+Carole King;Carole King;168
+Carrie Underwood;Carrie Underwood;169
+Cascada;Cascada;170
+Case;Case;171
+Cashmere Cat;Cashmere Cat;172
+Cassie;Cassie;173
+Celine Dion;Celine Dion;174
+Chad Kroeger;Chad Kroeger;175
+Chamillionaire;Chamillionaire;176
+Charlene Soraia;Charlene Soraia;177
+Charli Baltimore;Charli Baltimore;178
+Charli XCX;Charli XCX;179
+Charlie Puth;Charlie Puth;180
+Chase & Status;Chase and Status;181
+Cheat Codes;Cheat Codes;182
+Cher Lloyd;Cher Lloyd;183
+Cherish;Cherish;184
+Cheryl;Cheryl;185
+Chicane;Chicane;186
+Childish Gambino;Childish Gambino;187
+Chingy;Chingy;188
+Chip;Chip;189
+Chord Overstreet;Chord Overstreet;190
+Chris Brown;Chris Brown;191
+Chris Stapleton;Chris Stapleton;192
+Christina Aguilera;Christina Aguilera;193
+Christina Milian;Christina Milian;194
+Christina Perri;Christina Perri;195
+Christopher Cross;Christopher Cross;196
+Chuck Berry;Chuck Berry;197
+Ciara;Ciara;198
+Clean Bandit;Clean Bandit;199
+CNCO;CNCO;200
+Cobra Starship;Cobra Starship;201
+Colby O'Donis;Colby O Donis;202
+Coldplay;Coldplay;203
+Counting Crows;Counting Crows;204
+Craig David;Craig David;205
+Crazy Frog;Crazy Frog;206
+Crazy Town;Crazy Town;207
+Cream;Cream;208
+Creed;Creed;209
+Creedence Clearwater Revival;Creedence Clearwater Revival;210
+Curtis Mayfield;Curtis Mayfield;211
+D12;D12;212
+D4L;D4L;213
+Da Brat;Da Brat;214
+DaBaby;DaBaby;215
+Daddy Yankee;Daddy Yankee;216
+Daft Punk;Daft Punk;217
+Daft Punk feat Pharrell Williams & Nile Rodgers;Daft Punk;217
+Daniel Bedingfield;Daniel Bedingfield;218
+Daniel Powter;Daniel Powter;219
+Danity Kane;Danity Kane;220
+Darude;Darude;221
+Daughtry;Daughtry;222
+Dave;Dave;223
+Dave Matthews Band;Dave Matthews Band;224
+David Archuleta;David Archuleta;225
+David Banner;David Banner;226
+David Bowie;David Bowie;227
+David Guetta;David Guetta;228
+Daya;Daya;229
+DB Boulevard;DB Boulevard;230
+Dead & Company;Dead and Company;231
+Dean Lewis;Dean Lewis;232
+Debelah Morgan;Debelah Morgan;233
+Def Leppard;Def Leppard;234
+Default;Default;235
+Delta Goodrem;Delta Goodrem;236
+Dem Franchize Boyz;Dem Franchize Boyz;237
+Demi Lovato;Demi Lovato;238
+Dennis Lloyd;Dennis Lloyd;239
+Deorro;Deorro;240
+Desiigner;Desiigner;241
+Destiny's Child;Destiny s Child;242
+DEV;DEV;243
+Diana Ross and the Supremes;Diana Ross and the Supremes;244
+Diddy;Diddy;245
+Diddy - Dirty Money;Dirty Money;247
+Dido;Dido;246
+Dirty Vegas;Dirty Vegas;248
+Disclosure;Disclosure;249
+Disturbing Tha Peace;Disturbing Tha Peace;250
+Dixie Chicks;Dixie Chicks;251
+Dizzee Rascal;Dizzee Rascal;252
+DJ Ötzi;DJ Otzi;256
+DJ Casper;DJ Casper;253
+DJ Fresh;DJ Fresh;254
+DJ Khaled;DJ Khaled;255
+DJ Pied Piper & The Masters Of Ceremonies;DJ Pied Piper and The Masters Of Ceremonies;257
+DJ Sammy;DJ Sammy;258
+DJ Snake;DJ Snake;259
+DMX;DMX;260
+DNCE;DNCE;261
+Doja Cat;Doja Cat;262
+Domenico Modugno;Domenico Modugno;263
+Dominic Fike;Dominic Fike;264
+Donell Jones;Donell Jones;265
+Dr. Dre;Dr. Dre;266
+Drake;Drake;267
+Dua Lipa;Dua Lipa;268
+Duck Sauce;Duck Sauce;269
+Duffy;Duffy;270
+Duke Dumont;Duke Dumont;271
+Dynoro;Dynoro;272
+E-40;E 40;273
+Eagles;Eagles;274
+Eamon;Eamon;275
+Echosmith;Echosmith;276
+Ed Sheeran;Ed Sheeran;277
+Edward Maya;Edward Maya;278
+Eiffel 65;Eiffel 65;279
+Electric Six;Electric Six;280
+Ella Henderson;Ella Henderson;281
+Ella Mai;Ella Mai;282
+Ellie Goulding;Ellie Goulding;283
+Elliott Yamin;Elliott Yamin;284
+Elton John;Elton John;285
+Elvis Costello;Elvis Costello;286
+Elvis Presley;Elvis Presley;287
+Emeli Sandé;Emeli Sande;288
+Eminem;Eminem;289
+Emma Bunton;Emma Bunton;290
+Empire of the Sun;Empire of the Sun;291
+Enrique Iglesias;Enrique Iglesias;292
+Enya;Enya;293
+EO;EO;294
+Eric Church;Eric Church;295
+Eric Clapton;Eric Clapton;296
+Eric Prydz;Eric Prydz;297
+Erick Sermon;Erick Sermon;298
+Erykah Badu;Erykah Badu;299
+Estelle;Estelle;300
+Evanescence;Evanescence;301
+Eve;Eve;302
+Everly Brothers;Everly Brothers;303
+Example;Example;304
+Fabolous;Fabolous;305
+Faith Evans;Faith Evans;306
+Faith Hill;Faith Hill;307
+Faithless;Faithless;308
+Fall Out Boy;Fall Out Boy;309
+Far East Movement;Far East Movement;310
+Fat Joe;Fat Joe;311
+Fatman Scoop;Fatman Scoop;312
+Fats Domino;Fats Domino;313
+Fedde Le Grand;Fedde Le Grand;314
+Felix Jaehn;Felix Jaehn;315
+Fergie;Fergie;316
+Fetty Wap;Fetty Wap;317
+Fifth Harmony;Fifth Harmony;318
+Finger Eleven;Finger Eleven;319
+FINNEAS;FINNEAS;320
+Fitz and The Tantrums;Fitz and The Tantrums;321
+Five;Five;322
+Fleetwood Mac;Fleetwood Mac;323
+Flipp Dinero;Flipp Dinero;324
+Flo Rida;Flo Rida;325
+Floetry;Floetry;326
+Florence + The Machine;Florence + The Machine;327
+Florida Georgia Line;Florida Georgia Line;328
+Flume;Flume;329
+Foo Fighters;Foo Fighters;330
+Fort Minor;Fort Minor;331
+Foster The People;Foster The People;332
+Fragma;Fragma;333
+Frank Ocean;Frank Ocean;334
+Frank Sinatra;Frank Sinatra;335
+Frank Zappa;Frank Zappa;336
+Frankie J;Frankie J;337
+Franz Ferdinand;Franz Ferdinand;338
+French Montana;French Montana;339
+Fuel;Fuel;340
+fun.;fun.;341
+Future;Future;342
+G.R.L.;G.R.L.;345
+Gabriella Cilmi;Gabriella Cilmi;346
+Gabrielle;Gabrielle;347
+Galantis;Galantis;348
+Gareth Gates;Gareth Gates;349
+Garrett Nash;Garrett Nash;350
+Gary Jules;Gary Jules;351
+Gavin DeGraw;Gavin DeGraw;352
+G-Eazy;G Eazy;343
+Genesis;Genesis;353
+George Benson;George Benson;354
+George Harrison;George Harrison;355
+George Michael;George Michael;356
+George Strait;George Strait;357
+Geri Halliwell;Geri Halliwell;358
+Gesaffelstein;Gesaffelstein;359
+Gigi D'Agostino;Gigi D Agostino;360
+Ginuwine;Ginuwine;361
+girl in red;girl in red;362
+Girls Aloud;Girls Aloud;363
+Glen Campbell;Glen Campbell;364
+Gnarls Barkley;Gnarls Barkley;365
+Good Charlotte;Good Charlotte;366
+Gorgon City;Gorgon City;367
+Gorillaz;Gorillaz;368
+Gotye;Gotye;369
+Gotye feat Kimbra;Gotye;369
+Gram Parsons;Gram Parsons;370
+Grateful Dead;Grateful Dead;371
+Green Day;Green Day;372
+Grimes;Grimes;373
+Grouplove;Grouplove;374
+Grupo Firme;Grupo Firme;375
+G-Unit;G Unit;344
+Guns N' Roses;Guns N Roses;376
+Guru Josh Project;Guru Josh Project;377
+Guy Sebastian;Guy Sebastian;378
+Gwen Stefani;Gwen Stefani;379
+Gym Class Heroes;Gym Class Heroes;380
+"H ""two"" O";H two O;381
+Halsey;Halsey;382
+Hank Williams;Hank Williams;383
+Harry Styles;Harry Styles;384
+Hayden James;Hayden James;385
+Henry Mancini;Henry Mancini;386
+Herb Alpert;Herb Alpert;387
+Herbie Hancock;Herbie Hancock;388
+Hilltop Hoods;Hilltop Hoods;389
+Hinder;Hinder;390
+Holly Valance;Holly Valance;391
+Hoobastank;Hoobastank;392
+Hot Chelle Rae;Hot Chelle Rae;393
+Houston;Houston;394
+Howlin' Wolf;Howlin Wolf;395
+Hozier;Hozier;396
+Huey;Huey;397
+Hugh Jackman;Hugh Jackman;398
+iann dior;iann dior;399
+Icona Pop;Icona Pop;400
+Ida Corr;Ida Corr;401
+Iggy Azalea;Iggy Azalea;402
+iio;iio;403
+Illy;Illy;404
+Imagine Dragons;Imagine Dragons;405
+Infernal;Infernal;406
+INNA;INNA;407
+Iyaz;Iyaz;408
+J Balvin;J Balvin;409
+J. Cole;J. Cole;411
+J. Holiday;J. Holiday;412
+Ja Rule;Ja Rule;413
+Jack Ü;Jack U;414
+Jack White;Jack White;415
+Jackie Wilson;Jackie Wilson;416
+Jagged Edge;Jagged Edge;417
+Jaheim;Jaheim;418
+Jamelia;Jamelia;419
+James Arthur;James Arthur;420
+James Blunt;James Blunt;421
+James Brown;James Brown;422
+James Morrison;James Morrison;423
+James Taylor;James Taylor;424
+Jamie Foxx;Jamie Foxx;425
+Jamiroquai;Jamiroquai;426
+Janet Jackson;Janet Jackson;427
+Janis Joplin;Janis Joplin;428
+Jason Aldean;Jason Aldean;429
+Jason Derulo;Jason Derulo;430
+Jax Jones;Jax Jones;431
+Jay Rock;Jay Rock;432
+Jay Sean;Jay Sean;433
+Jay-Z;Jay Z;434
+Jeezy;Jeezy;435
+Jennifer Hudson;Jennifer Hudson;436
+Jennifer Lopez;Jennifer Lopez;437
+Jeremih;Jeremih;438
+Jerry Lee Lewis;Jerry Lee Lewis;439
+Jessica Simpson;Jessica Simpson;440
+Jessie J;Jessie J;441
+Jibbs;Jibbs;442
+Jim Jones;Jim Jones;443
+Jimi Hendrix;Jimi Hendrix;444
+Jimmy Eat World;Jimmy Eat World;445
+J-Kwon;J Kwon;410
+JLS;JLS;446
+Joao Gilberto;Joao Gilberto;447
+Joe;Joe;448
+Joel Adams;Joel Adams;449
+Joel Corry;Joel Corry;450
+John Legend;John Legend;451
+John Lennon;John Lennon;452
+John Newman;John Newman;453
+Johnny Cash;Johnny Cash;454
+JoJo;JoJo;455
+Jon Bellion;Jon Bellion;456
+Jonas Blue;Jonas Blue;457
+Jonas Brothers;Jonas Brothers;458
+Joni Mitchell;Joni Mitchell;459
+Jordin Sparks;Jordin Sparks;460
+Journey;Journey;461
+Juanes;Juanes;462
+Judy Garland;Judy Garland;463
+Juice WRLD;Juice WRLD;464
+Junior Senior;Junior Senior;465
+Just Jack;Just Jack;466
+Justin Bieber;Justin Bieber;467
+Justin Timberlake;Justin Timberlake;468
+JUVENILE;JUVENILE;469
+Kaiser Chiefs;Kaiser Chiefs;472
+KALEO;KALEO;473
+Kandi;Kandi;474
+Kanye West;Kanye West;475
+Kardinal Offishall;Kardinal Offishall;476
+Kasabian;Kasabian;477
+Katie Melua;Katie Melua;478
+Katy Perry;Katy Perry;479
+K-Ci & JoJo;K Ci and JoJo;470
+Keane;Keane;480
+Kehlani;Kehlani;481
+Keith Urban;Keith Urban;482
+Kelis;Kelis;483
+Kelly Clarkson;Kelly Clarkson;484
+Kelly Rowland;Kelly Rowland;485
+Kendrick Lamar;Kendrick Lamar;486
+Kenny Chesney;Kenny Chesney;487
+Kent Jones;Kent Jones;488
+Keri Hilson;Keri Hilson;489
+Kesha;Kesha;490
+Kevin Gates;Kevin Gates;491
+Kevin Lyttle;Kevin Lyttle;492
+Kevin Rudolf;Kevin Rudolf;493
+Keyshia Cole;Keyshia Cole;494
+Khalid;Khalid;495
+Khia;Khia;496
+Kid Cudi;Kid Cudi;497
+Kid Ink;Kid Ink;498
+Kiesza;Kiesza;499
+Kiiara;Kiiara;500
+Kim Carnes;Kim Carnes;501
+Kings of Leon;Kings of Leon;502
+Kiss;Kiss;503
+Klangkarussell;Klangkarussell;504
+Klaxons;Klaxons;505
+Klingande;Klingande;506
+K'NAAN;K NAAN;471
+Kodak Black;Kodak Black;507
+Kris Allen;Kris Allen;508
+KT Tunstall;KT Tunstall;509
+Kungs;Kungs;510
+Kygo;Kygo;511
+Kylie Minogue;Kylie Minogue;512
+La Roux;La Roux;513
+Labrinth;Labrinth;514
+Lady A;Lady A;515
+Lady Antebellum;Lady Antebellum;516
+Lady Gaga;Lady Gaga;517
+Lana Del Rey;Lana Del Rey;518
+Las Ketchup;Las Ketchup;519
+Lasgo;Lasgo;520
+Lauryn Hill;Lauryn Hill;521
+Lauv;Lauv;522
+LeAnn Rimes;LeAnn Rimes;523
+Led Zeppelin;Led Zeppelin;524
+Lemaitre;Lemaitre;525
+Lemar;Lemar;526
+Lenny Kravitz;Lenny Kravitz;527
+Leona Lewis;Leona Lewis;528
+Lewis Capaldi;Lewis Capaldi;529
+Liam Payne;Liam Payne;530
+Liberty X;Liberty X;531
+Lifehouse;Lifehouse;532
+Lil Baby;Lil Baby;533
+Lil Dicky;Lil Dicky;534
+Lil' Flip;Lil Flip;535
+Lil Jon;Lil Jon;536
+Lil Jon & The East Side Boyz;Lil Jon and The East Side Boyz;537
+Lil' Kim;Lil Kim;538
+Lil Nas X;Lil Nas X;539
+Lil Peep;Lil Peep;540
+Lil Pump;Lil Pump;541
+Lil Tecca;Lil Tecca;542
+Lil Uzi Vert;Lil Uzi Vert;543
+Lil Wayne;Lil Wayne;544
+Lilly Wood and The Prick;Lilly Wood and The Prick;545
+Lily Allen;Lily Allen;546
+Limp Bizkit;Limp Bizkit;547
+Linkin Park;Linkin Park;548
+Lionel Richie;Lionel Richie;549
+Little Mix;Little Mix;550
+Little Richard;Little Richard;551
+LL Cool J;LL Cool J;552
+Lloyd;Lloyd;553
+Lloyd Banks;Lloyd Banks;554
+LMC;LMC;555
+LMFAO;LMFAO;556
+Logic;Logic;557
+Lorde;Lorde;558
+Los Bukis;Los Bukis;559
+Lost Frequencies;Lost Frequencies;560
+Loud Luxury;Loud Luxury;561
+Lucenzo;Lucenzo;562
+Ludacris;Ludacris;563
+Luis Fonsi;Luis Fonsi;564
+Luke Bryan;Luke Bryan;565
+Luke Combs;Luke Combs;566
+Lumidee;Lumidee;567
+Lunay;Lunay;568
+Lupe Fiasco;Lupe Fiasco;569
+Lykke Li;Lykke Li;570
+Lynyrd Skynrd;Lynyrd Skynyrd;571
+Lynyrd Skynyrd;Lynyrd Skynyrd;571
+M.I.A.;M.I.A.;572
+M.O;M.O;573
+M.O.P.;M.O.P.;574
+M83;M83;575
+MØ;MO;632
+Mýa;Mya;645
+Mabel;Mabel;576
+Mac Miller;Mac Miller;577
+Machine Gun Kelly;Machine Gun Kelly;578
+Macklemore;Macklemore;579
+Macklemore & Ryan Lewis;Macklemore and Ryan Lewis;580
+Madcon;Madcon;581
+Madison Avenue;Madison Avenue;582
+Madonna;Madonna;583
+Maggie Lindemann;Maggie Lindemann;584
+MAGIC!;MAGIC;585
+Major Lazer;Major Lazer;586
+Maluma;Maluma;587
+Manic Street Preachers;Manic Street Preachers;588
+Mann;Mann;589
+Marc Anthony;Marc Anthony;590
+Mariah Carey;Mariah Carey;591
+Marilyn Manson;Marilyn Manson;592
+MARINA;MARINA;593
+Mario;Mario;594
+Mario Winans;Mario Winans;595
+Mark Ronson;Mark Ronson;596
+Mark Ronson feat Bruno Mars;Mark Ronson;596
+Maroon 5;Maroon 5;597
+Marshmello;Marshmello;598
+Martin Garrix;Martin Garrix;599
+Martin Jensen;Martin Jensen;600
+Martin Solveig;Martin Solveig;601
+Marvin Gaye;Marvin Gaye;602
+Mary J. Blige;Mary J. Blige;603
+Mary Mary;Mary Mary;604
+Matchbox Twenty;Matchbox Twenty;605
+Matt Cardle;Matt Cardle;606
+Meck;Meck;607
+MEDUZA;MEDUZA;608
+Meek Mill;Meek Mill;609
+Megan Thee Stallion;Megan Thee Stallion;610
+Meghan Trainor;Meghan Trainor;611
+Melanie C;Melanie C;612
+Metallica;Metallica;613
+Metro Station;Metro Station;614
+MGMT;MGMT;615
+Michael Jackson;Michael Jackson;616
+Michael Jackson *;Michael Jackson;616
+Michel Teló;Michel Telo;617
+Michelle Branch;Michelle Branch;618
+Migos;Migos;619
+Miguel;Miguel;620
+MIKA;MIKA;621
+Mike Perry;Mike Perry;622
+Mike Posner;Mike Posner;623
+Miley Cyrus;Miley Cyrus;624
+Milky Chance;Milky Chance;625
+MiMS;MiMS;626
+Missy Elliott;Missy Elliott;628
+Mis-Teeq;Mis Teeq;627
+MK;MK;629
+MKTO;MKTO;630
+MNEK;MNEK;631
+Modjo;Modjo;633
+Moloko;Moloko;634
+Monica;Monica;635
+Montell Jordan;Montell Jordan;636
+Morgan Wallen;Morgan Wallen;637
+Mr. Probz;Mr. Probz;638
+Muddy Waters;Muddy Waters;639
+Mumford & Sons;Mumford and Sons;640
+Muse;Muse;641
+Musiq Soulchild;Musiq Soulchild;642
+Mustard;Mustard;643
+My Chemical Romance;My Chemical Romance;644
+Mystikal;Mystikal;646
+N.E.R.D;N.E.R.D;647
+N.O.R.E.;N.O.R.E.;648
+Nas;Nas;649
+Natalie Cole;Natalie Cole;650
+Natalie Cole & Nat King Cole;Natalie Cole;650
+Natalie Imbruglia;Natalie Imbruglia;651
+Natalie La Rose;Natalie La Rose;652
+Natasha Bedingfield;Natasha Bedingfield;653
+Natti Natasha;Natti Natasha;654
+Naughty Boy;Naughty Boy;655
+Neil Young;Neil Young;657
+Nelly;Nelly;658
+Nelly Furtado;Nelly Furtado;659
+Neon Trees;Neon Trees;660
+New Kids on the Block;New Kids on the Block;661
+New Kids on the Block *;New Kids on the Block;661
+Next;Next;662
+Ne-Yo;Ne Yo;656
+NF;NF;663
+Nick Jonas;Nick Jonas;664
+Nick Lachey;Nick Lachey;665
+Nickelback;Nickelback;666
+Nicki Minaj;Nicki Minaj;667
+Nicky Jam;Nicky Jam;668
+Nico & Vinz;Nico and Vinz;669
+Nicole Scherzinger;Nicole Scherzinger;670
+Nina Sky;Nina Sky;671
+Nine Inch Nails;Nine Inch Nails;672
+Nio Garcia;Nio Garcia;673
+Nirvana;Nirvana;674
+NLE Choppa;NLE Choppa;675
+No Doubt;No Doubt;676
+Norah Jones;Norah Jones;677
+Normani;Normani;678
+NSG;NSG;679
+O.T. Genasis;O.T. Genasis;682
+Oasis;Oasis;683
+Of Monsters and Men;Of Monsters and Men;684
+Offset;Offset;685
+Oliver Heldens;Oliver Heldens;686
+Olivia Newton-John;Olivia Newton John;687
+Olivia Rodrigo;Olivia Rodrigo;688
+Olly Murs;Olly Murs;689
+Omarion;Omarion;690
+One Direction;One Direction;691
+OneRepublic;OneRepublic;692
+OPM;OPM;693
+Orson;Orson;694
+Otis Redding;Otis Redding;695
+Otto Knows;Otto Knows;696
+OutKast;OutKast;697
+Owl City;Owl City;698
+O-Zone;O Zone;681
+Ozuna;Ozuna;699
+P!nk;Pink;724
+P.O.D.;P.O.D.;700
+Paloma Faith;Paloma Faith;701
+Panic! At The Disco;Panic At The Disco;702
+Panjabi MC;Panjabi MC;703
+Papa Roach;Papa Roach;704
+Paramore;Paramore;705
+Parliament / Funkadelic;Parliament Funkadelic;706
+PARTYNEXTDOOR;PARTYNEXTDOOR;707
+Passenger;Passenger;708
+Patti Smith;Patti Smith;709
+Paul Simon;Paul Simon;710
+Paulo Londra;Paulo Londra;711
+Peabo Bryson & Regina Belle;Peabo Bryson;712
+Pedro Capó;Pedro Capo;713
+Peking Duk;Peking Duk;714
+Pendulum;Pendulum;715
+Percy Faith;Percy Faith;716
+Petey Pablo;Petey Pablo;717
+Petit Biscuit;Petit Biscuit;718
+Pharrell Williams;Pharrell Williams;719
+Phil Collins;Phil Collins;720
+Phil Spector;Phil Spector;721
+Philip George;Philip George;722
+Pia Mia;Pia Mia;723
+Pink;Pink;724
+Pink Floyd;Pink Floyd;725
+Pitbull;Pitbull;726
+Pixie Lott;Pixie Lott;727
+Plain White T's;Plain White T s;728
+Plan B;Plan B;729
+Playboi Carti;Playboi Carti;730
+Plies;Plies;731
+Polo G;Polo G;732
+Post Malone;Post Malone;733
+Pretty Ricky;Pretty Ricky;734
+Prince;Prince;735
+Professor Green;Professor Green;736
+PSY;PSY;737
+Public Enemy;Public Enemy;738
+Puddle Of Mudd;Puddle Of Mudd;739
+Queen;Queen;740
+Queen + Adam Lambert;Queen + Adam Lambert;741
+Quincy Jones and various artists;Quincy Jones;742
+R. City;R. City;743
+R.E.M.;R.E.M.;744
+Rachel Stevens;Rachel Stevens;745
+Radiohead;Radiohead;746
+Rae Sremmurd;Rae Sremmurd;747
+Rag'n'Bone Man;Rag n Bone Man;748
+Rascal Flatts;Rascal Flatts;749
+Ray Charles;Ray Charles;750
+Ray Charles & Norah Jones;Ray Charles;750
+Ray J;Ray J;751
+Razorlight;Razorlight;752
+Red Hot Chili Peppers;Red Hot Chili Peppers;753
+Regard;Regard;754
+Reik;Reik;755
+Rich Boy;Rich Boy;756
+Rich Homie Quan;Rich Homie Quan;757
+Rich The Kid;Rich The Kid;758
+Ricky Martin;Ricky Martin;759
+Rihanna;Rihanna;760
+Rita Ora;Rita Ora;761
+Rixton;Rixton;762
+Rizzle Kicks;Rizzle Kicks;763
+Rob $tone;Rob Stone;764
+Rob Thomas;Rob Thomas;765
+Robbie Williams;Robbie Williams;766
+Robert Plant;Robert Plant;767
+Robert Plant & Alison Krauss;Robert Plant;767
+Roberta Flack;Roberta Flack;768
+Robin Schulz;Robin Schulz;769
+Robin Thicke;Robin Thicke;770
+Robyn;Robyn;771
+Rod Wave;Rod Wave;772
+Roddy Ricch;Roddy Ricch;773
+Roger Sanchez;Roger Sanchez;774
+Rolling Stones;Rolling Stones;775
+Romeo Santos;Romeo Santos;776
+Ronan Keating;Ronan Keating;777
+Room 5;Room 5;778
+Route 94;Route 94;779
+Roy Orbison;Roy Orbison;780
+Rudimental;Rudimental;781
+Ruff Endz;Ruff Endz;782
+Rui Da Silva;Rui Da Silva;783
+Run;Run;784
+Russ Millions;Russ Millions;785
+Ryan Cabrera;Ryan Cabrera;786
+S Club 7;S Club 7;787
+Sak Noel;Sak Noel;788
+Sam Cooke;Sam Cooke;789
+Sam Feldt;Sam Feldt;790
+Sam Smith;Sam Smith;791
+Sam Sparro;Sam Sparro;792
+Samantha Mumba;Samantha Mumba;793
+Sammie;Sammie;794
+Sandi Thom;Sandi Thom;795
+Santana;Santana;796
+Santana feat Rob Thomas;Santana;796
+Savage Garden;Savage Garden;797
+Saving Abel;Saving Abel;798
+Saweetie;Saweetie;799
+SAYGRACE;SAYGRACE;800
+ScHoolboy Q;ScHoolboy Q;801
+Scissor Sisters;Scissor Sisters;802
+Scooter;Scooter;803
+Scouting For Girls;Scouting For Girls;804
+Seal;Seal;805
+Sean Kingston;Sean Kingston;806
+Sean Paul;Sean Paul;807
+Sebastian Ingrosso;Sebastian Ingrosso;808
+Sech;Sech;809
+Seether;Seether;810
+Selena Gomez;Selena Gomez;811
+Selena Gomez & The Scene;Selena Gomez & The Scene;812
+September;September;813
+Sex Pistols;Sex Pistols;814
+Shaggy;Shaggy;815
+Shakira;Shakira;816
+Shania Twain;Shania Twain;817
+Shawn Colvin;Shawn Colvin;818
+Shawn Mendes;Shawn Mendes;819
+Shayne Ward;Shayne Ward;820
+Sheck Wes;Sheck Wes;821
+Sheppard;Sheppard;822
+Sheryl Crow;Sheryl Crow;823
+Shinedown;Shinedown;824
+Shontelle;Shontelle;825
+Shop Boyz;Shop Boyz;826
+Sia;Sia;827
+Sidney Samson;Sidney Samson;828
+Sigala;Sigala;829
+Sigma;Sigma;830
+Silentó;Silento;831
+Silk Sonic;Silk Sonic;832
+Simon & Garfunkel;Simon and Garfunkel;833
+Simply Red;Simply Red;834
+Sisqo;Sisqo;835
+Skillet;Skillet;836
+Skrillex;Skrillex;837
+Sly & The Family Stone;Sly and The Family Stone;838
+Smokey Robinson & The Miracles;Smokey Robinson;839
+Snoop Dogg;Snoop Dogg;840
+Snow Patrol;Snow Patrol;841
+So Solid Crew;So Solid Crew;842
+Sofía Reyes;Sofia Reyes;843
+Sonique;Sonique;844
+Sophie Ellis-Bextor;Sophie Ellis Bextor;845
+Soulja Boy;Soulja Boy;846
+Special D.;Special D.;847
+Spiderbait;Spiderbait;848
+Staind;Staind;849
+Stan Getz;Stan Getz;850
+Stan Getz & Joao Gilberto;Stan Getz;850
+Starley;Starley;851
+Steely Dan;Steely Dan;852
+Steps;Steps;853
+Stereophonics;Stereophonics;854
+Steve Aoki;Steve Aoki;855
+Steve Winwood;Steve Winwood;856
+Stevie Wonder;Stevie Wonder;857
+Sting;Sting;858
+Storm Queen;Storm Queen;859
+Stormzy;Stormzy;860
+Stromae;Stromae;861
+Sugababes;Sugababes;862
+Sunshine Anderson;Sunshine Anderson;863
+Swedish House Mafia;Swedish House Mafia;864
+Switchfoot;Switchfoot;865
+t.A.T.u.;t.A.T.u.;867
+T.I.;T.I.;868
+T2;T2;869
+Taio Cruz;Taio Cruz;870
+Take That;Take That;871
+Talking Heads;Talking Heads;872
+Tame Impala;Tame Impala;873
+Tamia;Tamia;874
+Taylor Swift;Taylor Swift;875
+Terror Squad;Terror Squad;876
+The 5th Dimension;The 5th Dimension;877
+The All-American Rejects;The All American Rejects;878
+The Allman Brothers Band;The Allman Brothers Band;879
+The Band;The Band;880
+The Band Perry;The Band Perry;881
+The Beatles;The Beatles;882
+The Byrds;The Byrds;883
+The Calling;The Calling;884
+The Chainsmokers;The Chainsmokers;885
+The Chemical Brothers;The Chemical Brothers;886
+The Clash;The Clash;887
+The Corrs;The Corrs;888
+The Doobie Brothers;The Doobie Brothers;889
+The Doors;The Doors;890
+The Drifters;The Drifters;892
+The Eagles;The Eagles;893
+The Four Tops;The Four Tops;894
+The Fratellis;The Fratellis;895
+The Fray;The Fray;896
+The Game;The Game;897
+The Goo Goo Dolls;The Goo Goo Dolls;898
+The Kinks;The Kinks;899
+The Kooks;The Kooks;900
+The Lumineers;The Lumineers;901
+The Neighbourhood;The Neighbourhood;902
+The Notorious B.I.G.;The Notorious B.I.G.;903
+The Offspring;The Offspring;904
+The Police;The Police;905
+The Prodigy;The Prodigy;906
+The Pussycat Dolls;The Pussycat Dolls;907
+The Raconteurs;The Raconteurs;908
+The Ramones;The Ramones;909
+The Rasmus;The Rasmus;910
+The Red Jumpsuit Apparatus;The Red Jumpsuit Apparatus;911
+The Rolling Stones;The Rolling Stones;912
+The Roots;The Roots;913
+The Saturdays;The Saturdays;914
+The Script;The Script;915
+The Shapeshifters;The Shapeshifters;916
+The Shirelles;The Shirelles;917
+The Stooges;The Stooges;918
+The Streets;The Streets;919
+The Strokes;The Strokes;920
+The Strumbellas;The Strumbellas;921
+The Supermen Lovers;The Supermen Lovers;922
+The Temptations;The Temptations;923
+The Ting Tings;The Ting Tings;924
+The Vamps;The Vamps;925
+The Veronicas;The Veronicas;926
+The Wanted;The Wanted;927
+The Weeknd;The Weeknd;928
+The White Stripes;The White Stripes;929
+The Who;The Who;930
+The xx;The xx;931
+The Yardbirds;The Yardbirds;932
+The-Dream;The Dream;891
+Thirty Seconds To Mars;Thirty Seconds To Mars;933
+Thomas Rhett;Thomas Rhett;934
+Three Days Grace;Three Days Grace;935
+Tiësto;Tiesto;936
+Tim Berg;Tim Berg;937
+Timbaland;Timbaland;938
+Tina Turner;Tina Turner;939
+Tinashe;Tinashe;940
+Tinchy Stryder;Tinchy Stryder;941
+Tinie Tempah;Tinie Tempah;942
+Toby Keith;Toby Keith;943
+Tom Jones;Tom Jones;944
+Tom Odell;Tom Odell;945
+Tom Petty;Tom Petty;946
+Tom Walker;Tom Walker;947
+Tones And I;Tones And I;948
+Toni Braxton;Toni Braxton;949
+Tony Bennett;Tony Bennett;950
+Tool;Tool;951
+Tory Lanez;Tory Lanez;952
+Toto;Toto;953
+Tove Lo;Tove Lo;954
+T-Pain;T Pain;866
+Train;Train;955
+Trans-Siberian Orchestra;Trans Siberian Orchestra;956
+Trapt;Trapt;957
+Travie McCoy;Travie McCoy;958
+Travis;Travis;959
+Travis Scott;Travis Scott;960
+Trey Songz;Trey Songz;961
+Trick Daddy;Trick Daddy;962
+Trillville;Trillville;963
+Truth Hurts;Truth Hurts;964
+Tweet;Tweet;965
+Twenty One Pilots;Twenty One Pilots;966
+Twista;Twista;967
+Two Door Cinema Club;Two Door Cinema Club;968
+Tyga;Tyga;969
+Tyler;Tyler;970
+Tyrese;Tyrese;971
+U2;U2;972
+Ultrabeat;Ultrabeat;973
+Unk;Unk;974
+USA for Africa;USA for Africa;975
+Usher;Usher;976
+Van Morrison;Van Morrison;977
+Vance Joy;Vance Joy;978
+Vanessa Carlton;Vanessa Carlton;979
+Various artists[C] Produced by T Bone Burnett;Various artists Produced by T Bone Burnett;980
+Vaughn Meader;Vaughn Meader;981
+Velvet Underground;Velvet Underground;982
+Vengaboys;Vengaboys;983
+Waka Flocka Flame;Waka Flocka Flame;984
+Wale;Wale;985
+Wayne Wonder;Wayne Wonder;986
+Weezer;Weezer;987
+Westlife;Westlife;988
+Wheatus;Wheatus;989
+Whitney Houston[B];Whitney Houston;990
+Wiley;Wiley;991
+Will Smith;Will Smith;992
+Will Young;Will Young;993
+will.i.am;will.i.am;994
+WILLOW;WILLOW;995
+Wiz Khalifa;Wiz Khalifa;996
+Wyclef Jean;Wyclef Jean;997
+X Ambassadors;X Ambassadors;998
+XXXTentacion;XXXTentacion;999
+Years & Years;Years and Years;1000
+YG;YG;1001
+Ying Yang Twins;Ying Yang Twins;1002
+Ylvis;Ylvis;1003
+Yo Gotti;Yo Gotti;1004
+Yoko Ono;Yoko Ono;1005
+Yolanda Be Cool;Yolanda Be Cool;1006
+Young Money;Young Money;1007
+Young T & Bugsey;Young T and Bugsey;1008
+Young Thug;Young Thug;1009
+Youngbloodz;Youngbloodz;1010
+YoungBoy Never Broke Again;YoungBoy Never Broke Again;1011
+Yung Joc;Yung Joc;1012
+Zac Brown Band;Zac Brown Band;1013
+Zara Larsson;Zara Larsson;1014
+Zay Hilfigerrr;Zay Hilfigerrr;1015
+ZAYN;ZAYN;1016
+Zedd;Zedd;1017
+ZHU;ZHU;1018
