@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import Papa from 'papaparse';
 
 const BarChart = () => {
   const data = {

@@ -1,11 +1,15 @@
 import { Inter } from "next/font/google";
 import PageChanger from '../components/PageChanger';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import Papa from 'papaparse';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import BrushIcon from '@mui/icons-material/Brush';
 import CategoryIcon from '@mui/icons-material/Category';
-import Card from '../components/3DCard'
-import BarChart from '../components/BarChart'
+import Card from '../components/3DCard';
+import BarChartSongs from '../components/BarChartSongs';
+import BarChartGenres from '../components/BarChartGenres';
+import BarChartGenresScatter from '../components/BarChartGenresScatter';
 import TransitionChart from '../components/TransitionChart'
 import RadarChart3d from '../components/RadarChart3d'
 import ParallelChart from '../components/ParallelChart'
@@ -15,6 +19,41 @@ const inter = Inter({ subsets: ["latin"] });
 const Page_1 = () => {
   const [selected, setSelected] = useState("Songs");
   const [searchTerm, setSearchTerm] = useState("");
+
+
+  const [filteredSongs, setFilteredSongs] = useState([]);
+  const [selectedSong, setSelectedSong] = useState("");
+  const [songData, setSongData] = useState(null);
+
+
+
+  useEffect(() => {
+    axios.get('/data/hackathon_song_normalize.csv').then(response => {
+      Papa.parse(response.data, {
+        header: true,
+        complete: function (results) {
+          const validData = results.data.filter(song => song.name && song.year);
+          setSongData(validData);
+        }
+      });
+    });
+  }, []);
+
+
+  useEffect(() => {
+    if (songData){
+      const results = songData.filter(
+        (song) =>
+        (song.title &&
+          song.title.toLowerCase().includes(searchTerm.toLowerCase()))
+          ||
+          (song.artist &&
+            song.artist.toLowerCase().includes(searchTerm.toLowerCase()))
+            );
+            setFilteredSongs(results);
+            console.log(results);
+          }
+  }, [searchTerm, songData]);
 
   return (
     <div
@@ -45,7 +84,15 @@ const Page_1 = () => {
               Genres
             </div>
           </div>
-          <BarChart />
+          {
+            selected == 'Songs' ?
+              <BarChartSongs />
+              :
+              selected == 'Genres' ?
+                <BarChartGenresScatter />
+                : null
+          }
+
           {/* <TransitionChart/> */}
           {/* <RadarChart3d/> */}
           {/* <ParallelChart/> */}
@@ -132,31 +179,47 @@ const Page_1 = () => {
             />
           </div>
 
-          
+
         </div>
         <div className="flex flex-row gap-x-4 overflow-x-auto p-4">
-        <div className="transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-105">
-        <div className="h-40 w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
-          <div className="flex flex-row space-x-2 items-center">
-            <MusicNoteIcon fontSize="medium" style={{ color: "white" }} />
-            <p className="text-white text-sm whitespace-nowrap overflow-auto">Come as you are</p>
-          </div>
-          <div className="flex flex-row space-x-2 items-center">
-            <BrushIcon fontSize="medium" style={{ color: "white" }} />
-            <p className="text-white text-sm">Nirvana</p>
-          </div>
-          <div className="flex flex-row space-x-2 items-center">
-            <CategoryIcon fontSize="medium" style={{ color: "white" }} />
-            <p className="text-white text-sm">Rock</p>
-          </div>
-            <div className="flex flex-row space-x-2 items-center overflow-x-auto custom-scrollbar">
-              <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
-              <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
-              <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
+          {filteredSongs ? filteredSongs.slice(0,100).map((song, index) => (
+            <div className="transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-105">
+              <div className="h-[12rem] w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
+                <div className="flex flex-row space-x-2 items-center">
+                  <MusicNoteIcon fontSize="medium" style={{ color: "white" }} />
+                  <p className="text-white text-sm whitespace-nowrap overflow-auto">{song.name}</p>
+                </div>
+                <div className="flex flex-row space-x-2 items-center">
+                  <BrushIcon fontSize="medium" style={{ color: "white" }} />
+                  <p className="text-white text-sm">{song.artist}</p>
+                </div>
+                <div className="flex flex-row space-x-2 items-center">
+                  <CategoryIcon fontSize="medium" style={{ color: "white" }} />
+                  <p className="text-white text-sm">{song.genre}</p>
+                </div>
+                <div className="flex flex-row space-x-2 items-center overflow-x-auto custom-scrollbar">
+                  <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
+                  <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
+                  <p className="bg-white font-bold px-2 rounded-full text-custom-purple text-sm whitespace-nowrap">80 bpm</p>
+                </div>
+              </div>
             </div>
+          )):
+          <>
+          <div className="h-[12rem] w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
+            Loading...
           </div>
+          <div className="h-[12rem] w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
           </div>
+          <div className="h-[12rem] w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
           </div>
+          <div className="h-[12rem] w-[12rem] bg-custom-purple/50 rounded-lg mt-4 p-2 flex flex-col gap-y-2 relative shadow-md">
+          </div>
+          </>
+          }
+
+
+        </div>
       </div>
     </div>
   );
