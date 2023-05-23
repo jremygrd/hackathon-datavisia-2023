@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import PageChanger from '../components/PageChanger';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import Papa from 'papaparse';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import BrushIcon from '@mui/icons-material/Brush';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -8,208 +10,258 @@ import Card from '../components/3DCard'
 import BarChart from '../components/BarChart'
 import TransitionChart from '../components/TransitionChart'
 import RadarChart3d from '../components/RadarChart3d'
-import ParallelChart from '../components/ParallelChart'
+import ParallelChart from '../components/ParallelChart3'
 import Graph from '../components/Graph'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
+import RadarChart from "@/components/RadarChart";
 
 //Slider
 function valuetext(value) {
-  return `${value}°C`;
+    return `${value}°C`;
 }
 const minDistance = 2;
 //
 
 const inter = Inter({ subsets: ["latin"] });
 const Page_1 = () => {
-  // Slider
-  const [value2, setValue2] = React.useState([20, 37]);
 
-  const handleChange2 = (event, newValue, activeThumb) => {
-    if (!Array.isArray(newValue)) {
-      return;
-    }
+    const [selected_top, setSelected_top] = useState("Songs");
+    const [selected_bottom, setSelected_bottom] = useState("Songs");
 
-    if (newValue[1] - newValue[0] < minDistance) {
-      if (activeThumb === 0) {
-        const clamped = Math.min(newValue[0], 100 - minDistance);
-        setValue2([clamped, clamped + minDistance]);
-      } else {
-        const clamped = Math.max(newValue[1], minDistance);
-        setValue2([clamped - minDistance, clamped]);
-      }
-    } else {
-      setValue2(newValue);
-    }
-  };
-  //
-
-  return (
-    <div
-      className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
-    >
-      <PageChanger currentPage="Going deeper" prevPage="page_1" nextPage="page_3" />
+    const [selectedSongTop, setSelectedSongTop] = useState(null);
+    const [selectedSongBottom, setSelectedSongBottom] = useState(null);
 
 
-      <div className="flex h-[70vh] w-[80vw] mt-4 flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap space-y-4 md:space-y-0">
+    const [data, setData] = useState([]);
+    const [ArtistData, setArtistData] = useState([]);
+    const [GenresData, setGenresData] = useState([]);
+    const [parallelData, setParallelData] = useState([]);
+    
 
-        <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8">
+    useEffect(() => {
+        axios.get('/data/hackathon_song_normalize_no_duplicates.csv').then(response => {
+            Papa.parse(response.data, {
+                header: true,
+                complete: function (results) {
+                    const validData = results.data.filter(song => song.year && song.genre && song.name && song.artist);
+                    setData(validData);
+                }
+            });
+        });
 
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={top100Films}
-            renderInput={(params) => <TextField {...params} label="Movie" color="secondary"/>}
-          />
-          <Slider
-            getAriaLabel={() => 'Minimum distance shift'}
-            value={value2}
-            onChange={handleChange2}
-            valueLabelDisplay="auto"
-            color="secondary"
-            getAriaValueText={valuetext}
-            disableSwap
-          />
+        axios.get('/data/hackathon_song_normalize_artist_grouped.csv').then(response => {
+            Papa.parse(response.data, {
+                header: true,
+                complete: function (results) {
+                    const validDataArtist = results.data.filter(artist => artist.artist);
+                    setArtistData(validDataArtist);
+                }
+            });
+        });
 
+        axios.get('/data/hackathon_song_normalize_genre_grouped.csv').then(response => {
+            Papa.parse(response.data, {
+                header: true,
+                complete: function (results) {
+                    const validDataGenres = results.data.filter(genre => genre.genre);
+                    setGenresData(validDataGenres);
+                }
+            });
+        });
+
+
+        axios.get('/data/hackathon_parallel_chart.csv').then(response => {
+            Papa.parse(response.data, {
+                header: true,
+                complete: function (results) {
+                    const validDataparallel = results.data.filter(genre => genre.genre);
+                    setParallelData(validDataparallel);
+                }
+            });
+        });
+        
+
+
+    }, []);
+
+    return (
+        <div
+            className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
+        >
+            <PageChanger currentPage="Going deeper" prevPage="page_1" nextPage="page_3" />
+
+
+            <div className="flex h-[70vh] w-[80vw]  mt-4 flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap space-y-4 md:space-y-0">
+
+                <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8">
+                    <h1>Compare</h1>
+
+
+                    <div className="flex flex-wrap gap-y-2 md:gap-y-2 gap-x-[0.05rem] md:gap-x-4 justify-between items-center md:flex-row">
+                        <div
+                            onClick={() => { setSelected_top("Songs"); setSelectedSongTop(null); }}
+                            className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+          ${selected_top === 'Songs' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                            Songs
+                        </div>
+                        <div onClick={() => { setSelected_top("Artists"); setSelectedSongTop(null); }}
+                            className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+          ${selected_top === 'Artists' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                            Artists
+                        </div>
+                        <div onClick={() => { setSelected_top("Genres"); setSelectedSongTop(null); }}
+                            className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+          ${selected_top === 'Genres' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                            Genres
+                        </div>
+                        <div onClick={() => { setSelected_top("All"); setSelectedSongTop(null); }}
+                            className={`px-2 py-2 grow text-center rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+          ${selected_top === 'All' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                            All
+                        </div>
+
+
+                    </div>
+
+                    {
+                        selected_top == "Songs" ?
+                            <Autocomplete
+                                disablePortal
+                                id="combo-box-demo"
+                                options={data ? data : []}
+                                getOptionLabel={(option) => `${option.name} - ${option.artist}`}
+                                renderInput={(params) => <TextField {...params} label="Song" color="secondary" />}
+                                value={selectedSongTop}
+                                onChange={(event, value) => setSelectedSongTop(value)}
+                            />
+                            : selected_top == "Artists" ?
+
+                                <Autocomplete
+                                    disablePortal
+                                    id="combo-box-demo"
+                                    options={ArtistData ? ArtistData : []}
+                                    getOptionLabel={(option) => `${option.artist}`}
+                                    renderInput={(params) => <TextField {...params} label="Artist" color="secondary" />}
+                                    value={selectedSongTop}
+                                    onChange={(event, value) => setSelectedSongTop(value)}
+                                />
+                                : selected_top == "Genres" ?
+
+                                    <Autocomplete
+                                        disablePortal
+                                        id="combo-box-demo"
+                                        options={GenresData ? GenresData : []}
+                                        getOptionLabel={(option) => `${option.genre}`}
+                                        renderInput={(params) => <TextField {...params} label="Genre" color="secondary" />}
+                                        value={selectedSongTop}
+                                        onChange={(event, value) => setSelectedSongTop(value)}
+                                    /> :
+                                    selected_top == "All" ?
+
+                                        null : null
+                    }
+
+                    {
+                        selected_top !== "All" ?
+                            <>
+
+
+                                <h1>With</h1>
+
+
+                                <div className="flex flex-wrap gap-y-2 md:gap-y-2 gap-x-[0.05rem] md:gap-x-4 justify-between items-center md:flex-row">
+                                    <div
+                                        onClick={() => { setSelected_bottom("Songs"); setSelectedSongBottom(null); }}
+                                        className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+${selected_bottom === 'Songs' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                                        Songs
+                                    </div>
+                                    <div onClick={() => { setSelected_bottom("Artists"); setSelectedSongBottom(null); }}
+                                        className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+${selected_bottom === 'Artists' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                                        Artists
+                                    </div>
+                                    <div onClick={() => { setSelected_bottom("Genres"); setSelectedSongBottom(null); }}
+                                        className={`px-2 py-2 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+${selected_bottom === 'Genres' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}>
+                                        Genres
+                                    </div>
+
+
+
+
+                                </div>
+                                {
+                                    selected_bottom == "Songs" ?
+                                        <Autocomplete
+                                            disablePortal
+                                            id="combo-box-demo"
+                                            options={data ? data : []}
+                                            getOptionLabel={(option) => `${option.name} - ${option.artist}`}
+                                            renderInput={(params) => <TextField {...params} label="Song" color="secondary" />}
+                                            value={selectedSongBottom}
+                                            onChange={(event, value) => setSelectedSongBottom(value)}
+                                        />
+                                        :
+
+                                        selected_bottom == "Artists" ?
+                                            <Autocomplete
+                                                disablePortal
+                                                id="combo-box-demo"
+                                                options={ArtistData ? ArtistData : []}
+                                                getOptionLabel={(option) => `${option.artist}`}
+                                                renderInput={(params) => <TextField {...params} label="Artist" color="secondary" />}
+                                                value={selectedSongBottom}
+                                                onChange={(event, value) => setSelectedSongBottom(value)}
+                                            />
+                                            : selected_bottom == "Genres" ?
+                                                <Autocomplete
+                                                    disablePortal
+                                                    id="combo-box-demo"
+                                                    options={GenresData ? GenresData : []}
+                                                    getOptionLabel={(option) => `${option.genre}`}
+                                                    renderInput={(params) => <TextField {...params} label="Genre" color="secondary" />}
+                                                    value={selectedSongBottom}
+                                                    onChange={(event, value) => setSelectedSongBottom(value)}
+                                                />
+                                                : null
+                                }
+                            </> : null
+                    }
+
+                </div>
+
+                <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg shadow-lg p-4">
+                    <div className="flex flex-col h-full">
+                        <div className="flex-grow">
+                            {
+                                selected_top !== 'All' ?
+                                <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
+                                :
+                                <ParallelChart data = {parallelData}></ParallelChart>
+                            }
+
+
+                        </div>
+
+                        {/* <div className="flex-grow-0">
+                        <RadarChart />
+                        </div> */}
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
         </div>
-
-
-        <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg shadow-lg p-4">Right Square</div>
-
-      </div>
-    </div>
-  );
+    );
 };
 
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-  { label: 'The Shawshank Redemption', year: 1994 },
-  { label: 'The Godfather', year: 1972 },
-  { label: 'The Godfather: Part II', year: 1974 },
-  { label: 'The Dark Knight', year: 2008 },
-  { label: '12 Angry Men', year: 1957 },
-  { label: "Schindler's List", year: 1993 },
-  { label: 'Pulp Fiction', year: 1994 },
-  {
-    label: 'The Lord of the Rings: The Return of the King',
-    year: 2003,
-  },
-  { label: 'The Good, the Bad and the Ugly', year: 1966 },
-  { label: 'Fight Club', year: 1999 },
-  {
-    label: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001,
-  },
-  {
-    label: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980,
-  },
-  { label: 'Forrest Gump', year: 1994 },
-  { label: 'Inception', year: 2010 },
-  {
-    label: 'The Lord of the Rings: The Two Towers',
-    year: 2002,
-  },
-  { label: "One Flew Over the Cuckoo's Nest", year: 1975 },
-  { label: 'Goodfellas', year: 1990 },
-  { label: 'The Matrix', year: 1999 },
-  { label: 'Seven Samurai', year: 1954 },
-  {
-    label: 'Star Wars: Episode IV - A New Hope',
-    year: 1977,
-  },
-  { label: 'City of God', year: 2002 },
-  { label: 'Se7en', year: 1995 },
-  { label: 'The Silence of the Lambs', year: 1991 },
-  { label: "It's a Wonderful Life", year: 1946 },
-  { label: 'Life Is Beautiful', year: 1997 },
-  { label: 'The Usual Suspects', year: 1995 },
-  { label: 'Léon: The Professional', year: 1994 },
-  { label: 'Spirited Away', year: 2001 },
-  { label: 'Saving Private Ryan', year: 1998 },
-  { label: 'Once Upon a Time in the West', year: 1968 },
-  { label: 'American History X', year: 1998 },
-  { label: 'Interstellar', year: 2014 },
-  { label: 'Casablanca', year: 1942 },
-  { label: 'City Lights', year: 1931 },
-  { label: 'Psycho', year: 1960 },
-  { label: 'The Green Mile', year: 1999 },
-  { label: 'The Intouchables', year: 2011 },
-  { label: 'Modern Times', year: 1936 },
-  { label: 'Raiders of the Lost Ark', year: 1981 },
-  { label: 'Rear Window', year: 1954 },
-  { label: 'The Pianist', year: 2002 },
-  { label: 'The Departed', year: 2006 },
-  { label: 'Terminator 2: Judgment Day', year: 1991 },
-  { label: 'Back to the Future', year: 1985 },
-  { label: 'Whiplash', year: 2014 },
-  { label: 'Gladiator', year: 2000 },
-  { label: 'Memento', year: 2000 },
-  { label: 'The Prestige', year: 2006 },
-  { label: 'The Lion King', year: 1994 },
-  { label: 'Apocalypse Now', year: 1979 },
-  { label: 'Alien', year: 1979 },
-  { label: 'Sunset Boulevard', year: 1950 },
-  {
-    label: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
-    year: 1964,
-  },
-  { label: 'The Great Dictator', year: 1940 },
-  { label: 'Cinema Paradiso', year: 1988 },
-  { label: 'The Lives of Others', year: 2006 },
-  { label: 'Grave of the Fireflies', year: 1988 },
-  { label: 'Paths of Glory', year: 1957 },
-  { label: 'Django Unchained', year: 2012 },
-  { label: 'The Shining', year: 1980 },
-  { label: 'WALL·E', year: 2008 },
-  { label: 'American Beauty', year: 1999 },
-  { label: 'The Dark Knight Rises', year: 2012 },
-  { label: 'Princess Mononoke', year: 1997 },
-  { label: 'Aliens', year: 1986 },
-  { label: 'Oldboy', year: 2003 },
-  { label: 'Once Upon a Time in America', year: 1984 },
-  { label: 'Witness for the Prosecution', year: 1957 },
-  { label: 'Das Boot', year: 1981 },
-  { label: 'Citizen Kane', year: 1941 },
-  { label: 'North by Northwest', year: 1959 },
-  { label: 'Vertigo', year: 1958 },
-  {
-    label: 'Star Wars: Episode VI - Return of the Jedi',
-    year: 1983,
-  },
-  { label: 'Reservoir Dogs', year: 1992 },
-  { label: 'Braveheart', year: 1995 },
-  { label: 'M', year: 1931 },
-  { label: 'Requiem for a Dream', year: 2000 },
-  { label: 'Amélie', year: 2001 },
-  { label: 'A Clockwork Orange', year: 1971 },
-  { label: 'Like Stars on Earth', year: 2007 },
-  { label: 'Taxi Driver', year: 1976 },
-  { label: 'Lawrence of Arabia', year: 1962 },
-  { label: 'Double Indemnity', year: 1944 },
-  {
-    label: 'Eternal Sunshine of the Spotless Mind',
-    year: 2004,
-  },
-  { label: 'Amadeus', year: 1984 },
-  { label: 'To Kill a Mockingbird', year: 1962 },
-  { label: 'Toy Story 3', year: 2010 },
-  { label: 'Logan', year: 2017 },
-  { label: 'Full Metal Jacket', year: 1987 },
-  { label: 'Dangal', year: 2016 },
-  { label: 'The Sting', year: 1973 },
-  { label: '2001: A Space Odyssey', year: 1968 },
-  { label: "Singin' in the Rain", year: 1952 },
-  { label: 'Toy Story', year: 1995 },
-  { label: 'Bicycle Thieves', year: 1948 },
-  { label: 'The Kid', year: 1921 },
-  { label: 'Inglourious Basterds', year: 2009 },
-  { label: 'Snatch', year: 2000 },
-  { label: '3 Idiots', year: 2009 },
-  { label: 'Monty Python and the Holy Grail', year: 1975 },
-];
 
 export default Page_1;

@@ -79,6 +79,98 @@ function RadarChart({song_a, song_b, selected_top, selected_bottom}) {
         }
 
 
+        if (song_a && song_b && (selected_bottom === 'Genres') && (selected_top == 'Genres')){
+            let data =  [
+                
+                {
+                    value: [song_a.acousticness, song_a.danceability, song_a.duration_ms, song_a.energy, song_a.instrumentalness, song_a.liveness
+                        , song_a.popularity, song_a.speechiness, song_a.tempo, song_a.valence],
+                        name: `${song_a.genre} - ${song_a.name} songs`
+                },
+                {
+                    value: [song_b.acousticness, song_b.danceability, song_b.duration_ms, song_b.energy, song_b.instrumentalness, song_b.liveness
+                    , song_b.popularity, song_b.speechiness, song_b.tempo, song_b.valence],
+                    name: `${song_b.genre} - ${song_b.name} songs`
+                }
+            ]
+            setData(data)
+            setLegend([`${song_a.genre} - ${song_a.name} songs`,`${song_b.genre} - ${song_b.name} songs`])
+        }
+
+
+        if (song_a && song_b &&  (selected_top == 'Genres') && (selected_bottom === 'Artists')){
+            let data =  [
+                
+                {
+                    value: [song_a.acousticness, song_a.danceability, song_a.duration_ms, song_a.energy, song_a.instrumentalness, song_a.liveness
+                        , song_a.popularity, song_a.speechiness, song_a.tempo, song_a.valence],
+                        name: `${song_a.genre} - ${song_a.name} songs`
+                },
+                {
+                    value: [song_b.acousticness, song_b.danceability, song_b.duration_ms, song_b.energy, song_b.instrumentalness, song_b.liveness
+                    , song_b.popularity, song_b.speechiness, song_b.tempo, song_b.valence],
+                    name: `${song_b.artist} - ${song_b.year_min} - ${song_b.year_max}`
+                }
+            ]
+            setData(data)
+            setLegend([`${song_a.genre} - ${song_a.name} songs`,`${song_b.artist} - ${song_b.year_min} - ${song_b.year_max}`])
+        }
+
+        if (song_a && song_b && (selected_top == 'Artists') && (selected_bottom === 'Genres') ){
+            let data =  [
+                
+                {
+                    value: [song_a.acousticness, song_a.danceability, song_a.duration_ms, song_a.energy, song_a.instrumentalness, song_a.liveness
+                        , song_a.popularity, song_a.speechiness, song_a.tempo, song_a.valence],
+                        name: `${song_a.artist} - ${song_a.year_min} - ${song_a.year_max}`
+                },
+                {
+                    value: [song_b.acousticness, song_b.danceability, song_b.duration_ms, song_b.energy, song_b.instrumentalness, song_b.liveness
+                    , song_b.popularity, song_b.speechiness, song_b.tempo, song_b.valence],
+                    name: `${song_b.genre} - ${song_b.name} songs`
+                }
+            ]
+            setData(data)
+            setLegend([`${song_a.artist} - ${song_a.year_min} - ${song_a.year_max}`,`${song_b.genre} - ${song_b.name} songs`])
+        }
+
+        if (song_a && song_b && (selected_top == 'Songs') && (selected_bottom === 'Genres')){
+            let data =  [
+                {
+                    value: [song_a.acousticness, song_a.danceability, song_a.duration_ms, song_a.energy, song_a.instrumentalness, song_a.liveness
+                    , song_a.popularity, song_a.speechiness, song_a.tempo, song_a.valence],
+                    name: `${song_a.name} - ${song_a.artist} - ${song_a.year}`
+                },
+                {
+                    value: [song_b.acousticness, song_b.danceability, song_b.duration_ms, song_b.energy, song_b.instrumentalness, song_b.liveness
+                        , song_b.popularity, song_b.speechiness, song_b.tempo, song_b.valence],
+                    name: `${song_b.genre} - ${song_b.name} songs`
+                }
+                
+            ]
+            setData(data)
+            setLegend([`${song_a.name} - ${song_a.artist} - ${song_a.year}`,`${song_b.genre} - ${song_b.name} songs`])            
+        }
+
+        if (song_a && song_b && (selected_top == 'Genres') && (selected_bottom === 'Songs')){
+            let data =  [
+                
+                {
+                    value: [song_a.acousticness, song_a.danceability, song_a.duration_ms, song_a.energy, song_a.instrumentalness, song_a.liveness
+                        , song_a.popularity, song_a.speechiness, song_a.tempo, song_a.valence],
+                        name: `${song_a.genre} - ${song_a.name} songs`
+                },
+                {
+                    value: [song_b.acousticness, song_b.danceability, song_b.duration_ms, song_b.energy, song_b.instrumentalness, song_b.liveness
+                    , song_b.popularity, song_b.speechiness, song_b.tempo, song_b.valence],
+                    name: `${song_b.name} - ${song_b.artist} - ${song_b.year}`
+                }
+            ]
+            setData(data)
+            setLegend([`${song_a.genre} - ${song_a.name} songs`,`${song_b.name} - ${song_b.artist} - ${song_b.year}`])
+        }
+
+
 
     }, [song_a,song_b]);
 

@@ -14,6 +14,7 @@ import TransitionChart from '../components/TransitionChart'
 import RadarChart3d from '../components/RadarChart3d'
 import ParallelChart from '../components/ParallelChart'
 import Graph from '../components/Graph'
+import { generateBuildId } from "@/next.config";
 
 const inter = Inter({ subsets: ["latin"] });
 const Page_1 = () => {
@@ -24,6 +25,8 @@ const Page_1 = () => {
   const [filteredSongs, setFilteredSongs] = useState([]);
   const [selectedSong, setSelectedSong] = useState("");
   const [songData, setSongData] = useState(null);
+  const [artistsData, setArtistData] = useState(null);
+  const [GenresData, setGenresData] = useState(null);
 
 
 
@@ -37,7 +40,30 @@ const Page_1 = () => {
         }
       });
     });
+
+    
+    axios.get('/data/hackathon_song_normalize_artist_grouped.csv').then(response => {
+      Papa.parse(response.data, {
+          header: true,
+          complete: function (results) {
+              const validDataArtist = results.data.filter(artist => artist.artist);
+              setArtistData(validDataArtist);
+          }
+      });
+  });
+
+  axios.get('/data/hackathon_song_normalize_genre_grouped.csv').then(response => {
+      Papa.parse(response.data, {
+          header: true,
+          complete: function (results) {
+              const validDataGenres = results.data.filter(genre => genre.genre);
+              setGenresData(validDataGenres);
+          }
+      });
+  });
+
   }, []);
+
 
 
   useEffect(() => {
@@ -107,7 +133,7 @@ const Page_1 = () => {
               </div>
               <div className="flex flex-row justify-between items-center">
                 <p className="font-bold text-3xl text-custom-purple">
-                  4521
+                {songData ? songData.length : 0}
                 </p>
                 <p className="absolute right-1 top-8">
                   <MusicNoteIcon fontSize="large" style={{ color: "#8439FE" }} />
@@ -122,7 +148,7 @@ const Page_1 = () => {
               </div>
               <div className="flex flex-row justify-between items-center">
                 <p className="font-bold text-3xl text-custom-purple">
-                  836
+                {artistsData ? artistsData.length : 0}
                 </p>
                 <p className="absolute right-1 top-8">
                   <BrushIcon fontSize="large" style={{ color: "#8439FE" }} />
@@ -137,7 +163,7 @@ const Page_1 = () => {
               </div>
               <div className="flex flex-row justify-between items-center">
                 <p className="font-bold text-3xl text-custom-purple">
-                  41
+                  {GenresData ? GenresData.length : 0}
                 </p>
                 <p className="absolute right-1 top-8">
                   <CategoryIcon fontSize="large" style={{ color: "#8439FE" }} />
