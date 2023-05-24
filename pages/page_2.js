@@ -17,13 +17,48 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import RadarChart from "@/components/RadarChart";
+import ScatterChart from "@/components/ScatterChart";
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import ListItemText from '@mui/material/ListItemText';
+import Select from '@mui/material/Select';
+import Checkbox from '@mui/material/Checkbox';
 
-//Slider
-function valuetext(value) {
-    return `${value}°C`;
-}
-const minDistance = 2;
-//
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+        },
+    },
+};
+
+
+const axis_ = [
+    "acousticness",
+    "danceability",
+    "duration_ms",
+    "energy",
+    "instrumentalness",
+    "key",
+    "liveness",
+    "loudness",
+    "mode",
+    "popularity",
+    "speechiness",
+    "tempo",
+    "valence",
+    "year"
+]
+
+const genres_ = [
+    "pop", "rock"
+]
 
 const inter = Inter({ subsets: ["latin"] });
 const Page_1 = () => {
@@ -34,12 +69,31 @@ const Page_1 = () => {
     const [selectedSongTop, setSelectedSongTop] = useState(null);
     const [selectedSongBottom, setSelectedSongBottom] = useState(null);
 
+    const [selected_x_axis, setselected_x_axis] = useState(null);
+    const [selected_y_axis, setselected_y_axis] = useState(null);
+    const [selected_z_axis, setselected_z_axis] = useState(null);
+
 
     const [data, setData] = useState([]);
     const [ArtistData, setArtistData] = useState([]);
     const [GenresData, setGenresData] = useState([]);
+    const [distinctGenres, setDistinctGenresData] = useState([]);
     const [parallelData, setParallelData] = useState([]);
-    
+    const [selected_chart, setselected_chart] = useState("scatter");
+
+
+    const [personName, setPersonName] = React.useState([]);
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+
 
     useEffect(() => {
         axios.get('/data/hackathon_song_normalize_no_duplicates.csv').then(response => {
@@ -68,6 +122,8 @@ const Page_1 = () => {
                 complete: function (results) {
                     const validDataGenres = results.data.filter(genre => genre.genre);
                     setGenresData(validDataGenres);
+                    const distinctGenres = [...new Set(results.data.map(item => item.genre))].filter(Boolean);
+                    setDistinctGenresData(distinctGenres)
                 }
             });
         });
@@ -82,7 +138,7 @@ const Page_1 = () => {
                 }
             });
         });
-        
+
 
 
     }, []);
@@ -229,7 +285,76 @@ ${selected_bottom === 'Genres' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                                 />
                                                 : null
                                 }
-                            </> : null
+                            </> :
+
+                            <>
+                                <div className="flex flex-col w-full items-center">
+                                    <div onClick={() => setselected_chart("parallel")}
+                                        className={`px-2 py-2 w-full mt-6 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+${selected_chart === 'parallel' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}> Parallel Chart </div>
+
+                                    <div onClick={() => setselected_chart("scatter")}
+                                        className={`px-2 py-2 w-full mt-6 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
+${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}> Scatter Plot </div>
+
+
+
+                                    <Autocomplete
+                                        className="w-full mt-6  "
+                                        disablePortal
+                                        id="combo-box-demo"
+                                        options={axis_}
+                                        getOptionLabel={(option) => `${option}`}
+                                        renderInput={(params) => <TextField {...params} label="X-axis" color="secondary" />}
+                                        value={selected_x_axis}
+                                        onChange={(event, value) => setselected_x_axis(value)}
+                                    />
+                                    <Autocomplete
+                                        className="w-full mt-2  "
+                                        disablePortal
+                                        id="combo-box-demo"
+                                        options={axis_}
+                                        getOptionLabel={(option) => `${option}`}
+                                        renderInput={(params) => <TextField {...params} label="Y-axis" color="secondary" />}
+                                        value={selected_y_axis}
+                                        onChange={(event, value) => setselected_y_axis(value)}
+                                    />
+                                    <Autocomplete
+                                        className="w-full mt-2  "
+                                        disablePortal
+                                        id="combo-box-demo"
+                                        options={axis_}
+                                        getOptionLabel={(option) => `${option}`}
+                                        renderInput={(params) => <TextField {...params} label="Radius" color="secondary" />}
+                                        value={selected_z_axis}
+                                        onChange={(event, value) => setselected_z_axis(value)}
+                                    />
+
+                                    <div className="w-full mt-2">
+                                        <FormControl fullWidth={true}>
+                                            <InputLabel id="demo-multiple-checkbox-label" color="secondary">Genres filters</InputLabel>
+                                            <Select
+                                                labelId="demo-multiple-checkbox-label"
+                                                id="demo-multiple-checkbox"
+                                                multiple
+                                                value={personName}
+                                                onChange={handleChange}
+                                                input={<OutlinedInput label="Filtres" color="secondary"/>}
+                                                renderValue={(selected) => selected.join(', ')}
+                                                MenuProps={MenuProps}
+                                            >
+                                                {distinctGenres.map((name) => (
+                                                    <MenuItem key={name} value={name}>
+                                                        <Checkbox checked={personName.indexOf(name) > -1} />
+                                                        <ListItemText primary={name} />
+                                                    </MenuItem>
+                                                ))}
+                                            </Select>
+                                        </FormControl>
+                                    </div>
+
+                                </div>
+                            </>
                     }
 
                 </div>
@@ -239,9 +364,10 @@ ${selected_bottom === 'Genres' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                         <div className="flex-grow">
                             {
                                 selected_top !== 'All' ?
-                                <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
-                                :
-                                <ParallelChart data = {parallelData}></ParallelChart>
+                                    <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
+                                    :
+                                    // <ParallelChart data = {parallelData}></ParallelChart>
+                                    <ScatterChart data={parallelData} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
                             }
 
 
