@@ -91,13 +91,13 @@ const Page_1 = () => {
         <div
             className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
         >
-            <PageChanger currentPage="Going deeper" prevPage="page_1" nextPage="page_3" />
+            <PageChanger currentPage="Compare" prevPage="page_1" nextPage="page_3" />
 
 
             <div className="flex h-[70vh] w-[80vw]  mt-4 flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap space-y-4 md:space-y-0">
 
                 <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8">
-                    <h1>Compare</h1>
+                    <h1 className="font-bold text-xl text-custom-purple">Compare</h1>
 
 
                     <div className="flex flex-wrap gap-y-2 md:gap-y-2 gap-x-[0.05rem] md:gap-x-4 justify-between items-center md:flex-row">
@@ -169,7 +169,7 @@ const Page_1 = () => {
                             <>
 
 
-                                <h1>With</h1>
+                                <h1 className="font-bold text-xl text-custom-purple">With</h1>
 
 
                                 <div className="flex flex-wrap gap-y-2 md:gap-y-2 gap-x-[0.05rem] md:gap-x-4 justify-between items-center md:flex-row">

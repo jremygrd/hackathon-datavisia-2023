@@ -18,7 +18,7 @@ const SongChart = () => {
     });
   }, []);
 
-  if (!songData) return <div>Loading...</div>;
+  if (!songData) return <div></div>;
 
   // Preprocess data
   let years = {};
