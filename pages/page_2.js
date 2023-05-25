@@ -80,14 +80,13 @@ const Page_1 = () => {
     const [distinctGenres, setDistinctGenresData] = useState([]);
     const [parallelData, setParallelData] = useState([]);
     const [selected_chart, setselected_chart] = useState("scatter");
+    const [genreSelection, setGenreSelection] = React.useState(distinctGenres);
 
-
-    const [personName, setPersonName] = React.useState([]);
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
-        setPersonName(
+        setGenreSelection(
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
@@ -124,6 +123,7 @@ const Page_1 = () => {
                     setGenresData(validDataGenres);
                     const distinctGenres = [...new Set(results.data.map(item => item.genre))].filter(Boolean);
                     setDistinctGenresData(distinctGenres)
+                    setGenreSelection(distinctGenres)
                 }
             });
         });
@@ -332,12 +332,12 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
 
                                     <div className="w-full mt-2">
                                         <FormControl fullWidth={true}>
-                                            <InputLabel id="demo-multiple-checkbox-label" color="secondary">Genres filters</InputLabel>
+                                            <InputLabel id="demo-multiple-checkbox-label" color="secondary">Genres</InputLabel>
                                             <Select
                                                 labelId="demo-multiple-checkbox-label"
                                                 id="demo-multiple-checkbox"
                                                 multiple
-                                                value={personName}
+                                                value={genreSelection}
                                                 onChange={handleChange}
                                                 input={<OutlinedInput label="Filtres" color="secondary"/>}
                                                 renderValue={(selected) => selected.join(', ')}
@@ -345,7 +345,7 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                             >
                                                 {distinctGenres.map((name) => (
                                                     <MenuItem key={name} value={name}>
-                                                        <Checkbox checked={personName.indexOf(name) > -1} />
+                                                        <Checkbox checked={genreSelection.indexOf(name) > -1} />
                                                         <ListItemText primary={name} />
                                                     </MenuItem>
                                                 ))}
@@ -367,7 +367,7 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                     <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
                                     :
                                     // <ParallelChart data = {parallelData}></ParallelChart>
-                                    <ScatterChart data={parallelData} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
+                                    <ScatterChart data={parallelData.filter(item => genreSelection.includes(item.genre))} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
                             }
 
 

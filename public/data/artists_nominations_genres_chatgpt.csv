@@ -1,0 +1,101 @@
+,Rolling Stone Magazine Rank,Artist,ID Artist,Main Grammy awards,Main Grammy Nominations,Total Awards,Total Nominations,UK number 1's,genre
+0,1,The Beatles,882,2,10,14,29,17,Rock
+1,2,Bob Dylan,127,1,4,10,38,1,Folk
+2,3,Elvis Presley,287,0,2,2,4,21,Rock
+3,4,The Rolling Stones,912,0,1,4,14,8,Rock
+4,5,Chuck Berry,197,0,0,0,0,1,Rock
+5,6,Jimi Hendrix,444,0,0,0,1,0,Rock
+6,7,James Brown,422,0,0,3,8,0,Funk
+7,8,Little Richard,551,0,0,0,0,0,Rock
+8,9,Aretha Franklin,56,0,0,18,44,1,Soul
+9,10,Ray Charles,750,2,6,17,37,1,R&B
+10,11,Bob Marley,128,0,0,0,0,0,Reggae
+11,12,Beach Boys,96,0,0,0,4,2,Rock
+12,13,Buddy Holly,153,0,0,0,0,2,Rock
+13,14,Led Zeppelin,524,0,0,1,3,0,Rock
+14,15,Stevie Wonder,857,3,8,25,74,2,Soul
+15,16,Sam Cooke,789,0,0,0,6,0,R&B
+16,17,Muddy Waters,639,0,0,6,11,0,Blues
+17,18,Marvin Gaye,602,0,0,2,12,1,Soul
+18,19,Velvet Underground,982,0,0,0,0,0,Rock
+19,20,Bo Diddley,126,0,0,0,2,0,Blues
+20,21,Otis Redding,695,0,0,2,5,0,Soul
+21,22,U2,972,6,11,22,46,7,Rock
+22,23,Bruce Springsteen,148,1,8,20,50,0,Rock
+23,24,Jerry Lee Lewis,439,0,0,1,3,0,Rock
+24,25,Fats Domino,313,0,0,0,0,0,R&B
+25,26,The Ramones,909,0,0,0,0,0,Punk
+26,27,Prince,735,0,3,7,38,0,Pop
+27,28,The Clash,887,0,0,1,1,1,Punk
+28,29,The Who,930,0,0,0,2,0,Rock
+29,30,Nirvana,674,0,0,1,6,0,Grunge
+30,31,Johnny Cash,454,0,2,13,35,0,Country
+31,32,Smokey Robinson,839,0,0,0,1,0,R&B
+32,33,Everly Brothers,303,0,0,0,4,4,Rock
+33,34,Neil Young,657,0,3,2,27,0,Rock
+34,35,Michael Jackson,616,3,8,13,38,7,Pop
+35,36,Madonna,583,0,3,7,28,13,Pop
+36,37,Roy Orbison,780,0,1,5,9,3,Rock
+37,38,John Lennon,452,1,2,1,4,3,Rock
+38,39,David Bowie,227,0,1,5,19,5,Rock
+39,40,Simon and Garfunkel,833,3,4,7,11,1,Folk
+40,41,The Doors,890,0,0,0,0,0,Rock
+41,42,Van Morrison,977,0,0,2,7,0,Rock
+42,43,Sly and The Family Stone,838,0,0,0,0,0,Funk
+43,44,Public Enemy,738,0,0,0,6,0,Hip Hop
+44,45,The Byrds,883,0,0,0,0,1,Rock
+45,46,Janis Joplin,428,0,0,0,2,0,Rock
+46,47,Patti Smith,709,0,0,0,4,0,Rock
+47,48,Run,784,0,0,0,1,1,Hip Hop
+48,49,Elton John,285,0,7,5,34,7,Pop
+49,50,The Band,880,0,0,0,0,0,Rock
+50,51,Pink Floyd,725,0,1,1,4,1,Rock
+51,52,Queen,740,0,0,0,4,6,Rock
+52,53,The Allman Brothers Band,879,0,0,1,8,0,Rock
+53,54,Howlin Wolf,395,0,0,0,3,0,Blues
+54,55,Eric Clapton,296,5,6,17,37,0,Rock
+55,56,Dr. Dre,266,0,4,6,26,0,Hip Hop
+56,57,Grateful Dead,371,0,0,0,0,0,Rock
+57,58,Parliament Funkadelic,706,0,0,0,0,0,Funk
+58,59,Aerosmith,19,0,0,4,14,0,Rock
+59,60,Sex Pistols,814,0,0,0,0,0,Punk
+60,61,Metallica,613,0,0,8,18,0,Heavy Metal
+61,62,Joni Mitchell,459,1,3,8,16,0,Folk
+62,63,Tina Turner,939,2,3,8,25,0,Rock
+63,64,Phil Spector,721,1,3,1,3,0,Pop
+64,65,The Kinks,899,0,0,0,0,0,Rock
+65,66,Al Green,25,0,0,11,21,0,Soul
+66,67,Cream,208,0,0,0,1,0,Rock
+67,68,The Temptations,923,0,0,4,9,0,R&B
+68,69,Jackie Wilson,416,0,0,0,2,0,R&B
+69,70,The Police,905,0,2,5,8,5,Rock
+70,71,Frank Zappa,336,0,0,2,9,0,Rock
+71,72,AC DC,16,0,0,1,7,0,Rock
+72,73,Radiohead,746,0,3,3,18,0,Alternative
+73,74,Hank Williams,383,0,0,0,0,0,Country
+74,75,The Eagles,893,1,4,6,18,0,Rock
+75,76,The Shirelles,917,0,0,0,0,0,R&B
+76,77,Beastie Boys,97,0,0,3,10,0,Hip Hop
+77,78,The Stooges,918,0,0,0,0,0,Rock
+78,79,The Four Tops,894,0,0,0,1,1,R&B
+79,80,Elvis Costello,286,0,0,1,14,0,Rock
+80,81,The Drifters,892,0,0,0,1,0,R&B
+81,82,Creedence Clearwater Revival,210,0,0,0,0,1,Rock
+82,83,Eminem,289,0,9,15,44,9,Hip Hop
+83,84,James Taylor,424,0,5,5,18,0,Folk
+84,85,Black Sabbath,114,0,0,2,4,0,Heavy Metal
+85,86,2Pac,5,0,0,0,6,1,Hip Hop
+86,87,Gram Parsons,370,0,0,0,1,0,Country
+87,88,Jay Z,434,0,10,22,77,4,Hip Hop
+88,89,The Yardbirds,932,0,0,0,0,0,Rock
+89,90,Carlos Santana,166,2,2,10,14,0,Rock
+90,91,Tom Petty,946,0,2,3,18,0,Rock
+91,92,Guns N Roses,376,0,0,0,3,0,Rock
+92,93,Booker T and The MG s,140,0,0,1,4,0,Soul
+93,94,Nine Inch Nails,672,0,0,2,10,0,Rock
+94,95,Lynyrd Skynyrd,571,0,0,0,0,0,Rock
+95,96,Diana Ross and the Supremes,244,0,0,0,2,1,R&B
+96,97,R.E.M.,744,0,3,3,13,0,Alternative
+97,98,Curtis Mayfield,211,0,0,0,8,0,R&B
+98,99,Carl Perkins,164,0,0,1,2,0,Rock and Roll
+99,100,Talking Heads,872,0,0,0,2,0,Rock
