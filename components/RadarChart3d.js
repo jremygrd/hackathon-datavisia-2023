@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
+import axios from 'axios';
 
-class RadarPlot extends React.Component {
+/* function getData() {
+  const [moneyData, setMoneyData] = useState([]);
+  useEffect(() => {
+    axios.get('/data/hackathon_money_makers.csv').then(response => {
+        Papa.parse(response.data, {
+            header: true,
+            complete: function(results) {
+              setMoneyData(results.data);
+            }
+        });
+    });
+  }, []);  
+  return moneyData;
+}
+console.log(getData()); */
+
+class RadarPlot extends React.Component {  
   getOption = () => {
     var list = [];
     for (var i = 1; i <= 28; i++) {

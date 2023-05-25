@@ -45,7 +45,7 @@ const Page_2 = () => {
     <div
       className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1w]${inter.className}`}
     >
-      <PageChanger currentPage="Présentation" prevPage="page_2" nextPage={null} />
+      <PageChanger currentPage="Présentation" prevPage="page_2" nextPage="page_4" />
       <div class="flex h-[80vh] w-full">
         <div class="flex flex-col w-1/3">
           <div class="m-4 p-4 bg-red-200 rounded-lg flex-shrink">
