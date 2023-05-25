@@ -366,7 +366,9 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                 selected_top !== 'All' ?
                                     <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
                                     :
-                                    // <ParallelChart data = {parallelData}></ParallelChart>
+                                    selected_chart =='parallel'?
+                                    <ParallelChart data = {parallelData}></ParallelChart>
+                                    :
                                     <ScatterChart data={parallelData.filter(item => genreSelection.includes(item.genre))} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
                             }
 
