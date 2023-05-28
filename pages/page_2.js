@@ -152,7 +152,7 @@ const Page_1 = () => {
 
             <div className="flex h-[70vh] w-[80vw]  mt-4 flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap space-y-4 md:space-y-0">
 
-                <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8">
+                <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8 overflow-y-auto">
                     <h1 className="font-bold text-xl text-custom-purple">Compare</h1>
 
 

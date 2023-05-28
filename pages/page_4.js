@@ -54,7 +54,11 @@ const Page_4 = () => {
 
       <div className="flex h-[40vh] w-[80vw] flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap">
         <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg mt-4 shadow-lg p-4 ">
-          <div className="bg-white bg-opacity-50 rounded-full p-3 text-center">How much money did each genre make throughout the years ?</div>
+          <Card>
+          <div className="bg-white bg-opacity-50 rounded-lg p-3 text-center text-custom-purple font-bold cursor-default">How much money did each genre make throughout the years ?</div>
+          </Card>
+
+
         </div>
         <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg mt-4 shadow-lg p-4">
           {/* <Graph/> */}
