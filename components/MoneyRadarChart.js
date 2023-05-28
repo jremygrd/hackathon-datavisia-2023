@@ -18,10 +18,6 @@ function MoneyRadarChart(selectedArtist) {
         });
     }, []);
     
-    let minYear = Math.min(...moneyData.map(d => d.year));
-    let maxYear = Math.max(...moneyData.map(d => d.year));
-    
-
     var list = [];
     for (var a of moneyData) {
         if (!list.includes(a.year)) {
@@ -31,12 +27,18 @@ function MoneyRadarChart(selectedArtist) {
 
     var option = {
     title: {
-        text: "Artists' Money Sources",
-        subtext: 'Per Year',
+        text: "Artists' Money Sources Per Year",
         top: 10,
-        left: 10
+        left: 10,
+        textStyle: {
+            color: '#8439FE',
+        },
     },
     tooltip: {
+        textStyle: {
+            color: '#8439FE', 
+        },
+        borderColor: '#8439FE',
         trigger: 'item'
     },
     legend: {
@@ -44,18 +46,21 @@ function MoneyRadarChart(selectedArtist) {
         bottom: 10,
         data: list,
         orient: 'vertical',
-        left: 'left',        
+        left: 'left',   
+        textStyle: {
+            color: '#8439FE',
+        }
     },
     radar: {
         indicator: [
-            { text: 'Publishing', textStyle: {color: "white"} },
-            { text: 'Sales+', textStyle: {color: "white"} },
-            { text: 'Streaming', textStyle: {color: "white"} },
-            { text: 'Touring', textStyle: {color: "white"} }
+            { text: 'Publishing' },
+            { text: 'Sales' },
+            { text: 'Streaming' },
+            { text: 'Touring' }
         ],
         name: {
             textStyle: {
-              color: '#8439FE' // Change label color to white
+              color: '#8439FE'
             }
         }
     },
