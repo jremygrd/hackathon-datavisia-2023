@@ -89,8 +89,15 @@ function LineRaceChart() {
         title: {
             text: 'Money Per Year Per Genre',
             left: 'left',
-        },        
+            textStyle: {
+                color: '#8439FE',
+            }
+        },      
         tooltip: {
+            textStyle: {
+                color: '#8439FE', 
+            },
+            borderColor: '#8439FE',
             trigger: 'axis'
         },
         legend: {
@@ -100,10 +107,25 @@ function LineRaceChart() {
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: years
+            data: years,
+            axisLine: {
+                lineStyle: {
+                    color: '#8439FE'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: '#8439FE'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#9055f0'
+                }
+            }
         },
         series: Object.entries(data).map(([genre, genreData]) => ({
             name: genre,
@@ -117,13 +139,15 @@ function LineRaceChart() {
                 color: genreColors[genre]
             },
             label: {
-                show: false
+                show: false,
+                color: '#8439FE'
             },
             endLabel: {
                 show: true,
                 formatter: function (params) {
                     return genre + ': ' + Math.round(genreData.reduce((partialSum, a) => partialSum + a, 0));
-                }
+                },
+                color: '#8439FE'
             },
             labelLayout: {
                 moveOverlap: 'shiftY'
