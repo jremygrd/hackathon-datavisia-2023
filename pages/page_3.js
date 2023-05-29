@@ -1,84 +1,82 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import PageChanger from '../components/PageChanger';
-import React, { useState, useEffect } from "react";
-import Papa from "papaparse";
-import BarGraph from "../components/bar_csv";
-import PolarChart from "../components/polar";
+import React, { useEffect, useState } from 'react';
+import MoneyArtistRace from '../components/MoneyArtistRace'
+import MoneyRadarChart from '../components/MoneyRadarChart'
+import { styled } from '@mui/material/styles';
+import axios from 'axios';
+import Papa from 'papaparse';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import Card from '../components/3DCard';
+
+const ScrollableContainer = styled('div')({
+  maxHeight: '300px',
+  overflowY: 'auto',
+});
+
+
 
 const inter = Inter({ subsets: ["latin"] });
-const Page_2 = () => {
+const Page_4 = () => {
+  const [selected, setSelected] = useState("Songs");
   const [searchTerm, setSearchTerm] = useState("");
-  const [songs, setSongs] = useState([]);
-  const [filteredSongs, setFilteredSongs] = useState([]);
-  const [selectedSong, setSelectedSong] = useState("");
-
+  const [artists, setArtists] = useState([]);
+  const [selectedArtist, setSelectedArtists] = useState("");
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("/data/top10s.csv");
-      const reader = response.body.getReader();
-      const result = await reader.read();
-      const decoder = new TextDecoder("utf-8");
-      const csv = decoder.decode(result.value);
-
-      const results = Papa.parse(csv, { header: true });
-      setSongs(results.data);
-    }
-
-    fetchData();
+    axios.get('/data/hackathon_money_makers.csv').then(response => {
+      Papa.parse(response.data, {
+        header: true,
+        complete: function (results) {
+          results.data.pop()
+          const listArtists = results.data.map(function (a) { return a["Artist"]; });
+          setArtists([...new Set(listArtists)]);
+        }
+      });
+    });
   }, []);
-
-  useEffect(() => {
-    const results = songs.filter(
-      (song) =>
-        (song.title &&
-        song.title.toLowerCase().includes(searchTerm.toLowerCase()))
-        ||
-        (song.artist &&
-          song.artist.toLowerCase().includes(searchTerm.toLowerCase()))
-    );
-    setFilteredSongs(results);
-    console.log(results);
-  }, [searchTerm, songs]);
 
   return (
     <div
-      className={`flex min-h-[96vh] rounded-lg flex-col backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1w]${inter.className}`}
+      className={`shadow-lg overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
     >
-      <PageChanger currentPage="Présentation" prevPage="page_2" nextPage="page_4" />
-      <div class="flex h-[80vh] w-full">
-        <div class="flex flex-col w-1/3">
-          <div class="m-4 p-4 bg-red-200 rounded-lg flex-shrink">
-          <input
-            className="w-full px-3 py-2 text-gray-700 border-0 bg-transparent placeholder-gray-500 focus:outline-none"
-            type="text"
-            placeholder="Search for a song..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          </div>
-          <div class="m-4 p-4 bg-blue-200 rounded-lg flex-grow overflow-auto">
-            <h3 class="text-lg font-semibold mb-2">Musiques</h3>
-            <ul>
-            {filteredSongs.map((song) => (
-              <li onClick={()=>setSelectedSong(song)} key={song[""]} className={"p-1 rounded-lg bg-blue-100 mb-2 hover:bg-blue-600 hover:text-white hover:cursor-pointer"}>{song.title} - {song.artist}</li> // song[""] is the row number, we use it as ID
-            ))}
-          </ul>
+      <PageChanger currentPage="Money Money Money" prevPage="page_2" nextPage="page_4" />
+
+
+      <div className="flex h-[40vh] w-[80vw] flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap">
+        <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg mt-4 shadow-lg p-4 ">
+          <Card>
+          <div className="bg-white bg-opacity-50 rounded-lg p-3 text-center text-custom-purple font-bold cursor-default">How much money did each genre make throughout the years ?</div>
+          </Card>
+
+
+        </div>
+        
+        <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg mt-4 shadow-lg p-4">
+          {/* <Graph/> */}
+          <MoneyArtistRace />
+        </div>
+      </div>
+      <div className="flex h-[40vh] w-[80vw] flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap">
+        <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg mt-4 shadow-lg p-4 text-2xl text-custom-purple">
+          <h1 className="font-bold text-xl text-custom-purple">Select an artist !</h1>
+          <div className="mt-5">            
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={artists}
+              renderInput={(params) => <TextField {...params} label="Artist" color="secondary"/>}
+              value={selectedArtist}
+              onChange={(event, value) => setSelectedArtists(value)}
+            />            
           </div>
         </div>
-        <div class="flex flex-col w-2/3">
-          <div class="m-4 p-4 bg-purple-200 rounded-lg flex-grow overflow-hidden">
-          <p className="mb-1">{selectedSong.title ? selectedSong.title:"Select a song"}</p>
-          <p className="mb-6">{selectedSong.title ? selectedSong.artist:""}</p>
-          <div className="h-[35rem] overflow-auto">
-            {/* <BarGraph/> */}
-            <PolarChart song={selectedSong} chartHeight={800}/>
-          </div>
-          </div>
+        <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg mt-4 shadow-lg p-4">
+          <MoneyRadarChart selectedArtist={selectedArtist} />
         </div>
       </div>
     </div>
   );
 };
 
-export default Page_2;
+export default Page_4;

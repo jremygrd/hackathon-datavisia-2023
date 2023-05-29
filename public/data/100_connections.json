@@ -1,0 +1,1211 @@
+{
+  "nodes": [
+    {
+      "name": "lil wayne",
+      "category": 0
+    },
+    {
+      "name": "ludacris",
+      "category": 0
+    },
+    {
+      "name": "rihanna",
+      "category": 0
+    },
+    {
+      "name": "t-pain",
+      "category": 0
+    },
+    {
+      "name": "kanye west",
+      "category": 0
+    },
+    {
+      "name": "nelly",
+      "category": 0
+    },
+    {
+      "name": "jay-z",
+      "category": 0
+    },
+    {
+      "name": "drake",
+      "category": 1
+    },
+    {
+      "name": "puff daddy",
+      "category": 1
+    },
+    {
+      "name": "akon",
+      "category": 1
+    },
+    {
+      "name": "50 cent",
+      "category": 1
+    },
+    {
+      "name": "lil jon",
+      "category": 1
+    },
+    {
+      "name": "justin timberlake",
+      "category": 1
+    },
+    {
+      "name": "nicki minaj",
+      "category": 1
+    },
+    {
+      "name": "ja rule",
+      "category": 1
+    },
+    {
+      "name": "ciara",
+      "category": 1
+    },
+    {
+      "name": "pitbull",
+      "category": 1
+    },
+    {
+      "name": "snoop dogg",
+      "category": 1
+    },
+    {
+      "name": "usher",
+      "category": 1
+    },
+    {
+      "name": "eminem",
+      "category": 2
+    },
+    {
+      "name": "beyonce",
+      "category": 2
+    },
+    {
+      "name": "flo rida",
+      "category": 2
+    },
+    {
+      "name": "t.i.",
+      "category": 2
+    },
+    {
+      "name": "jennifer lopez",
+      "category": 2
+    },
+    {
+      "name": "ne-yo",
+      "category": 2
+    },
+    {
+      "name": "chris brown",
+      "category": 2
+    },
+    {
+      "name": "david guetta",
+      "category": 2
+    },
+    {
+      "name": "mase",
+      "category": 2
+    },
+    {
+      "name": "pharrell",
+      "category": 2
+    },
+    {
+      "name": "timbaland",
+      "category": 2
+    },
+    {
+      "name": "p. diddy",
+      "category": 2
+    },
+    {
+      "name": "ke$ha",
+      "category": 2
+    },
+    {
+      "name": "r. kelly",
+      "category": 3
+    },
+    {
+      "name": "ariana grande",
+      "category": 3
+    },
+    {
+      "name": "justin bieber",
+      "category": 3
+    },
+    {
+      "name": "bruno mars",
+      "category": 3
+    },
+    {
+      "name": "ashanti",
+      "category": 3
+    },
+    {
+      "name": "missy elliott",
+      "category": 3
+    },
+    {
+      "name": "mariah carey",
+      "category": 3
+    },
+    {
+      "name": "sean paul",
+      "category": 3
+    },
+    {
+      "name": "busta rhymes",
+      "category": 3
+    },
+    {
+      "name": "eve",
+      "category": 3
+    },
+    {
+      "name": "wiz khalifa",
+      "category": 3
+    },
+    {
+      "name": "jamie foxx",
+      "category": 3
+    },
+    {
+      "name": "santana",
+      "category": 4
+    },
+    {
+      "name": "christina aguilera",
+      "category": 4
+    },
+    {
+      "name": "fabolous",
+      "category": 4
+    },
+    {
+      "name": "b.o.b",
+      "category": 4
+    },
+    {
+      "name": "iggy azalea",
+      "category": 4
+    },
+    {
+      "name": "gwen stefani",
+      "category": 4
+    },
+    {
+      "name": "dr. dre",
+      "category": 4
+    },
+    {
+      "name": "faith evans",
+      "category": 4
+    },
+    {
+      "name": "tim mcgraw",
+      "category": 4
+    },
+    {
+      "name": "missy \"misdemeanor\" elliott",
+      "category": 4
+    },
+    {
+      "name": "bow wow",
+      "category": 4
+    },
+    {
+      "name": "keyshia cole",
+      "category": 4
+    },
+    {
+      "name": "jeremih",
+      "category": 4
+    },
+    {
+      "name": "britney spears",
+      "category": 5
+    },
+    {
+      "name": "the east side boyz",
+      "category": 5
+    },
+    {
+      "name": "ll cool j",
+      "category": 5
+    },
+    {
+      "name": "alicia keys",
+      "category": 5
+    },
+    {
+      "name": "katy perry",
+      "category": 5
+    },
+    {
+      "name": "prince",
+      "category": 5
+    },
+    {
+      "name": "will.i.am",
+      "category": 5
+    },
+    {
+      "name": "ying yang twins",
+      "category": 5
+    },
+    {
+      "name": "sia",
+      "category": 5
+    },
+    {
+      "name": "joe",
+      "category": 5
+    },
+    {
+      "name": "ricardo \"rikrok\" ducent",
+      "category": 5
+    },
+    {
+      "name": "nas",
+      "category": 5
+    },
+    {
+      "name": "total",
+      "category": 6
+    },
+    {
+      "name": "no doubt",
+      "category": 6
+    },
+    {
+      "name": "jay sean",
+      "category": 6
+    },
+    {
+      "name": "dru hill",
+      "category": 6
+    },
+    {
+      "name": "keri hilson",
+      "category": 6
+    },
+    {
+      "name": "montell jordan",
+      "category": 6
+    },
+    {
+      "name": "trey songz",
+      "category": 6
+    },
+    {
+      "name": "lady gaga",
+      "category": 6
+    },
+    {
+      "name": "3oh!3",
+      "category": 6
+    },
+    {
+      "name": "cam'ron",
+      "category": 6
+    },
+    {
+      "name": "master p",
+      "category": 6
+    },
+    {
+      "name": "enrique iglesias",
+      "category": 6
+    },
+    {
+      "name": "diddy",
+      "category": 6
+    },
+    {
+      "name": "the notorious b.i.g.",
+      "category": 7
+    },
+    {
+      "name": "far*east movement",
+      "category": 7
+    },
+    {
+      "name": "112",
+      "category": 7
+    },
+    {
+      "name": "mario winans",
+      "category": 7
+    },
+    {
+      "name": "shakira",
+      "category": 7
+    },
+    {
+      "name": "nelly furtado",
+      "category": 7
+    },
+    {
+      "name": "maroon 5",
+      "category": 7
+    },
+    {
+      "name": "cobra starship",
+      "category": 7
+    },
+    {
+      "name": "chamillionaire",
+      "category": 7
+    },
+    {
+      "name": "mystikal",
+      "category": 7
+    },
+    {
+      "name": "murphy lee",
+      "category": 7
+    },
+    {
+      "name": "faith hill",
+      "category": 7
+    },
+    {
+      "name": "madonna",
+      "category": 8
+    },
+    {
+      "name": "lil' mo",
+      "category": 8
+    },
+    {
+      "name": "ali",
+      "category": 8
+    },
+    {
+      "name": "young jeezy",
+      "category": 8
+    },
+    {
+      "name": "ryan lewis",
+      "category": 8
+    },
+    {
+      "name": "nate dogg",
+      "category": 8
+    }
+  ],
+  "links": [
+    {
+      "source": 8,
+      "target": 27,
+      "value": 4
+    },
+    {
+      "source": 52,
+      "target": 93,
+      "value": 2
+    },
+    {
+      "source": 8,
+      "target": 51,
+      "value": 2
+    },
+    {
+      "source": 8,
+      "target": 84,
+      "value": 1
+    },
+    {
+      "source": 82,
+      "target": 8,
+      "value": 2
+    },
+    {
+      "source": 8,
+      "target": 82,
+      "value": 2
+    },
+    {
+      "source": 27,
+      "target": 69,
+      "value": 1
+    },
+    {
+      "source": 74,
+      "target": 79,
+      "value": 2
+    },
+    {
+      "source": 27,
+      "target": 8,
+      "value": 4
+    },
+    {
+      "source": 69,
+      "target": 37,
+      "value": 1
+    },
+    {
+      "source": 51,
+      "target": 8,
+      "value": 2
+    },
+    {
+      "source": 38,
+      "target": 6,
+      "value": 1
+    },
+    {
+      "source": 8,
+      "target": 32,
+      "value": 1
+    },
+    {
+      "source": 53,
+      "target": 41,
+      "value": 1
+    },
+    {
+      "source": 53,
+      "target": 68,
+      "value": 1
+    },
+    {
+      "source": 38,
+      "target": 66,
+      "value": 1
+    },
+    {
+      "source": 66,
+      "target": 91,
+      "value": 1
+    },
+    {
+      "source": 14,
+      "target": 95,
+      "value": 1
+    },
+    {
+      "source": 32,
+      "target": 6,
+      "value": 1
+    },
+    {
+      "source": 41,
+      "target": 49,
+      "value": 2
+    },
+    {
+      "source": 23,
+      "target": 14,
+      "value": 2
+    },
+    {
+      "source": 14,
+      "target": 36,
+      "value": 4
+    },
+    {
+      "source": 30,
+      "target": 18,
+      "value": 1
+    },
+    {
+      "source": 23,
+      "target": 68,
+      "value": 1
+    },
+    {
+      "source": 30,
+      "target": 85,
+      "value": 2
+    },
+    {
+      "source": 41,
+      "target": 60,
+      "value": 1
+    },
+    {
+      "source": 1,
+      "target": 91,
+      "value": 1
+    },
+    {
+      "source": 5,
+      "target": 92,
+      "value": 2
+    },
+    {
+      "source": 5,
+      "target": 96,
+      "value": 2
+    },
+    {
+      "source": 23,
+      "target": 59,
+      "value": 2
+    },
+    {
+      "source": 53,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 17,
+      "target": 28,
+      "value": 2
+    },
+    {
+      "source": 10,
+      "target": 99,
+      "value": 1
+    },
+    {
+      "source": 40,
+      "target": 38,
+      "value": 1
+    },
+    {
+      "source": 46,
+      "target": 95,
+      "value": 1
+    },
+    {
+      "source": 20,
+      "target": 6,
+      "value": 2
+    },
+    {
+      "source": 11,
+      "target": 58,
+      "value": 2
+    },
+    {
+      "source": 11,
+      "target": 64,
+      "value": 2
+    },
+    {
+      "source": 5,
+      "target": 30,
+      "value": 1
+    },
+    {
+      "source": 28,
+      "target": 6,
+      "value": 1
+    },
+    {
+      "source": 20,
+      "target": 39,
+      "value": 1
+    },
+    {
+      "source": 1,
+      "target": 17,
+      "value": 1
+    },
+    {
+      "source": 4,
+      "target": 43,
+      "value": 2
+    },
+    {
+      "source": 18,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 18,
+      "target": 11,
+      "value": 2
+    },
+    {
+      "source": 64,
+      "target": 11,
+      "value": 2
+    },
+    {
+      "source": 64,
+      "target": 58,
+      "value": 1
+    },
+    {
+      "source": 85,
+      "target": 30,
+      "value": 2
+    },
+    {
+      "source": 18,
+      "target": 60,
+      "value": 1
+    },
+    {
+      "source": 5,
+      "target": 52,
+      "value": 1
+    },
+    {
+      "source": 14,
+      "target": 32,
+      "value": 1
+    },
+    {
+      "source": 15,
+      "target": 37,
+      "value": 2
+    },
+    {
+      "source": 11,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 11,
+      "target": 18,
+      "value": 2
+    },
+    {
+      "source": 22,
+      "target": 0,
+      "value": 1
+    },
+    {
+      "source": 49,
+      "target": 41,
+      "value": 2
+    },
+    {
+      "source": 15,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 37,
+      "target": 15,
+      "value": 2
+    },
+    {
+      "source": 54,
+      "target": 15,
+      "value": 1
+    },
+    {
+      "source": 97,
+      "target": 9,
+      "value": 1
+    },
+    {
+      "source": 43,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 19,
+      "target": 99,
+      "value": 1
+    },
+    {
+      "source": 59,
+      "target": 23,
+      "value": 2
+    },
+    {
+      "source": 87,
+      "target": 29,
+      "value": 2
+    },
+    {
+      "source": 39,
+      "target": 55,
+      "value": 1
+    },
+    {
+      "source": 15,
+      "target": 90,
+      "value": 1
+    },
+    {
+      "source": 1,
+      "target": 28,
+      "value": 1
+    },
+    {
+      "source": 9,
+      "target": 19,
+      "value": 1
+    },
+    {
+      "source": 12,
+      "target": 22,
+      "value": 2
+    },
+    {
+      "source": 9,
+      "target": 17,
+      "value": 1
+    },
+    {
+      "source": 54,
+      "target": 25,
+      "value": 1
+    },
+    {
+      "source": 49,
+      "target": 9,
+      "value": 1
+    },
+    {
+      "source": 2,
+      "target": 39,
+      "value": 1
+    },
+    {
+      "source": 20,
+      "target": 86,
+      "value": 1
+    },
+    {
+      "source": 81,
+      "target": 55,
+      "value": 1
+    },
+    {
+      "source": 29,
+      "target": 12,
+      "value": 1
+    },
+    {
+      "source": 29,
+      "target": 87,
+      "value": 2
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "value": 2
+    },
+    {
+      "source": 46,
+      "target": 24,
+      "value": 1
+    },
+    {
+      "source": 29,
+      "target": 73,
+      "value": 1
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "value": 1
+    },
+    {
+      "source": 55,
+      "target": 37,
+      "value": 1
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "value": 1
+    },
+    {
+      "source": 10,
+      "target": 29,
+      "value": 1
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "value": 1
+    },
+    {
+      "source": 25,
+      "target": 3,
+      "value": 2
+    },
+    {
+      "source": 2,
+      "target": 24,
+      "value": 1
+    },
+    {
+      "source": 21,
+      "target": 3,
+      "value": 1
+    },
+    {
+      "source": 18,
+      "target": 97,
+      "value": 1
+    },
+    {
+      "source": 94,
+      "target": 12,
+      "value": 1
+    },
+    {
+      "source": 21,
+      "target": 63,
+      "value": 1
+    },
+    {
+      "source": 6,
+      "target": 0,
+      "value": 1
+    },
+    {
+      "source": 6,
+      "target": 4,
+      "value": 2
+    },
+    {
+      "source": 6,
+      "target": 22,
+      "value": 1
+    },
+    {
+      "source": 3,
+      "target": 0,
+      "value": 2
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "value": 2
+    },
+    {
+      "source": 22,
+      "target": 2,
+      "value": 1
+    },
+    {
+      "source": 19,
+      "target": 10,
+      "value": 1
+    },
+    {
+      "source": 19,
+      "target": 50,
+      "value": 2
+    },
+    {
+      "source": 22,
+      "target": 12,
+      "value": 2
+    },
+    {
+      "source": 21,
+      "target": 31,
+      "value": 1
+    },
+    {
+      "source": 43,
+      "target": 3,
+      "value": 1
+    },
+    {
+      "source": 15,
+      "target": 12,
+      "value": 1
+    },
+    {
+      "source": 73,
+      "target": 4,
+      "value": 1
+    },
+    {
+      "source": 73,
+      "target": 24,
+      "value": 1
+    },
+    {
+      "source": 71,
+      "target": 0,
+      "value": 1
+    },
+    {
+      "source": 6,
+      "target": 2,
+      "value": 2
+    },
+    {
+      "source": 7,
+      "target": 0,
+      "value": 5
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "value": 1
+    },
+    {
+      "source": 7,
+      "target": 19,
+      "value": 1
+    },
+    {
+      "source": 26,
+      "target": 9,
+      "value": 1
+    },
+    {
+      "source": 71,
+      "target": 11,
+      "value": 1
+    },
+    {
+      "source": 71,
+      "target": 39,
+      "value": 1
+    },
+    {
+      "source": 31,
+      "target": 77,
+      "value": 2
+    },
+    {
+      "source": 34,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 75,
+      "target": 46,
+      "value": 1
+    },
+    {
+      "source": 47,
+      "target": 35,
+      "value": 1
+    },
+    {
+      "source": 76,
+      "target": 20,
+      "value": 1
+    },
+    {
+      "source": 18,
+      "target": 63,
+      "value": 1
+    },
+    {
+      "source": 77,
+      "target": 31,
+      "value": 2
+    },
+    {
+      "source": 61,
+      "target": 17,
+      "value": 1
+    },
+    {
+      "source": 19,
+      "target": 2,
+      "value": 2
+    },
+    {
+      "source": 80,
+      "target": 16,
+      "value": 1
+    },
+    {
+      "source": 18,
+      "target": 16,
+      "value": 1
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "value": 5
+    },
+    {
+      "source": 21,
+      "target": 26,
+      "value": 1
+    },
+    {
+      "source": 75,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "value": 2
+    },
+    {
+      "source": 80,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 16,
+      "target": 3,
+      "value": 1
+    },
+    {
+      "source": 50,
+      "target": 19,
+      "value": 2
+    },
+    {
+      "source": 61,
+      "target": 4,
+      "value": 1
+    },
+    {
+      "source": 23,
+      "target": 16,
+      "value": 1
+    },
+    {
+      "source": 25,
+      "target": 0,
+      "value": 2
+    },
+    {
+      "source": 25,
+      "target": 40,
+      "value": 1
+    },
+    {
+      "source": 56,
+      "target": 10,
+      "value": 1
+    },
+    {
+      "source": 2,
+      "target": 57,
+      "value": 1
+    },
+    {
+      "source": 57,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 57,
+      "target": 31,
+      "value": 1
+    },
+    {
+      "source": 16,
+      "target": 24,
+      "value": 2
+    },
+    {
+      "source": 88,
+      "target": 45,
+      "value": 1
+    },
+    {
+      "source": 47,
+      "target": 0,
+      "value": 1
+    },
+    {
+      "source": 26,
+      "target": 18,
+      "value": 1
+    },
+    {
+      "source": 17,
+      "target": 35,
+      "value": 1
+    },
+    {
+      "source": 17,
+      "target": 42,
+      "value": 1
+    },
+    {
+      "source": 7,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 7,
+      "target": 2,
+      "value": 2
+    },
+    {
+      "source": 3,
+      "target": 42,
+      "value": 1
+    },
+    {
+      "source": 94,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 21,
+      "target": 65,
+      "value": 1
+    },
+    {
+      "source": 88,
+      "target": 42,
+      "value": 1
+    },
+    {
+      "source": 26,
+      "target": 65,
+      "value": 1
+    },
+    {
+      "source": 34,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 63,
+      "target": 57,
+      "value": 1
+    },
+    {
+      "source": 16,
+      "target": 45,
+      "value": 1
+    },
+    {
+      "source": 22,
+      "target": 28,
+      "value": 1
+    },
+    {
+      "source": 16,
+      "target": 31,
+      "value": 1
+    },
+    {
+      "source": 33,
+      "target": 48,
+      "value": 1
+    },
+    {
+      "source": 33,
+      "target": 13,
+      "value": 1
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "value": 1
+    },
+    {
+      "source": 26,
+      "target": 13,
+      "value": 1
+    }
+  ]
+}

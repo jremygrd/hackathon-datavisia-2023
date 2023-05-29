@@ -88,12 +88,18 @@ export default function Home() {
           Move me
         </div>
 
-      <div className="hover:z-50 absolute top-[50px] mt-72 flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:rounded-full before:bg-gradient-radial before:from-transparent before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-transparent after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
+      <div className="hover:z-50 z-[11] absolute top-[50px] mt-72 flex hover:animate-pulse place-items-center before:absolute before:h-[300px] before:w-[480px] before:rounded-full before:bg-gradient-radial before:from-transparent before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-transparent after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
 
         <Card>
           <DraggableImage src="/team_esilv.png" />
         </Card>
 
+      </div>
+      <div className='absolute right-[40vw] top-[50vh] text-md p-1 bg-white/40 shadow-lg rounded-lg z-10 justify-center flex flex-col items-center'>
+        <p>Si les artistes étaient</p>
+        <p>des produits financiers,</p>
+        <p>Sur QUI</p>
+        <p>Devrait-on parier ?</p>
       </div>
 
     </main>

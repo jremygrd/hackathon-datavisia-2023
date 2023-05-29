@@ -80,14 +80,13 @@ const Page_1 = () => {
     const [distinctGenres, setDistinctGenresData] = useState([]);
     const [parallelData, setParallelData] = useState([]);
     const [selected_chart, setselected_chart] = useState("scatter");
+    const [genreSelection, setGenreSelection] = React.useState(distinctGenres);
 
-
-    const [personName, setPersonName] = React.useState([]);
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
-        setPersonName(
+        setGenreSelection(
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
@@ -124,6 +123,7 @@ const Page_1 = () => {
                     setGenresData(validDataGenres);
                     const distinctGenres = [...new Set(results.data.map(item => item.genre))].filter(Boolean);
                     setDistinctGenresData(distinctGenres)
+                    setGenreSelection(distinctGenres)
                 }
             });
         });
@@ -145,14 +145,14 @@ const Page_1 = () => {
 
     return (
         <div
-            className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
+            className={`shadow-lg overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}
         >
             <PageChanger currentPage="Compare" prevPage="page_1" nextPage="page_3" />
 
 
             <div className="flex h-[70vh] w-[80vw]  mt-4 flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap space-y-4 md:space-y-0">
 
-                <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8">
+                <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg shadow-lg p-4 flex flex-col gap-y-8 overflow-y-auto">
                     <h1 className="font-bold text-xl text-custom-purple">Compare</h1>
 
 
@@ -332,12 +332,12 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
 
                                     <div className="w-full mt-2">
                                         <FormControl fullWidth={true}>
-                                            <InputLabel id="demo-multiple-checkbox-label" color="secondary">Genres filters</InputLabel>
+                                            <InputLabel id="demo-multiple-checkbox-label" color="secondary">Genres</InputLabel>
                                             <Select
                                                 labelId="demo-multiple-checkbox-label"
                                                 id="demo-multiple-checkbox"
                                                 multiple
-                                                value={personName}
+                                                value={genreSelection}
                                                 onChange={handleChange}
                                                 input={<OutlinedInput label="Filtres" color="secondary"/>}
                                                 renderValue={(selected) => selected.join(', ')}
@@ -345,7 +345,7 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                             >
                                                 {distinctGenres.map((name) => (
                                                     <MenuItem key={name} value={name}>
-                                                        <Checkbox checked={personName.indexOf(name) > -1} />
+                                                        <Checkbox checked={genreSelection.indexOf(name) > -1} />
                                                         <ListItemText primary={name} />
                                                     </MenuItem>
                                                 ))}
@@ -366,8 +366,10 @@ ${selected_chart === 'scatter' ? "hover:bg-custom-purple/90 bg-custom-purple tex
                                 selected_top !== 'All' ?
                                     <RadarChart song_a={selectedSongTop} song_b={selectedSongBottom} selected_top={selected_top} selected_bottom={selected_bottom} />
                                     :
-                                    // <ParallelChart data = {parallelData}></ParallelChart>
-                                    <ScatterChart data={parallelData} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
+                                    selected_chart =='parallel'?
+                                    <ParallelChart data = {parallelData}></ParallelChart>
+                                    :
+                                    <ScatterChart data={parallelData.filter(item => genreSelection.includes(item.genre))} x_axis={selected_x_axis} y_axis={selected_y_axis} width_axis={selected_z_axis} />
                             }
 
 
