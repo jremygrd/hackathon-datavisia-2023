@@ -1,80 +1,124 @@
-import { Inter } from "next/font/google";
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { useSpring, animated } from 'react-spring'
+import { useDrag } from 'react-use-gesture';
 import PageChanger from '../components/PageChanger';
-import SunBurst from '../components/sunBurst';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Papa from 'papaparse';
+import { Inter } from 'next/font/google'
+import Card from '@/components/3DCard';
+const inter = Inter({ subsets: ['latin'] })
+import ReplayIcon from '@mui/icons-material/Replay';
+import Link from 'next/link';
 import IconButton from '@mui/material/IconButton';
-import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import Image from 'next/image'
+// This animation moves an element from top to bottom of its container
+const fallAnimation = keyframes`
+  0% { top: -5%; }
+  100% { top: 105%; }
+`;
 
-const inter = Inter({ subsets: ["latin"] });
-const Page_5 = () => {
-  const [trigger, setTrigger] = useState(true);
-  const [songData, setSongData] = useState([]);
-  const [selectedAward, setSelectedAward] = useState("Total Awards");
-  const [wand, setWand] = useState(true);
+// This is a styled component which will use the animation
+const Dollar = styled.div`
+  position: absolute;
+  top: 0;
+  animation: ${fallAnimation} 3s linear;
+  animation-delay: ${props => props.delay}s;
+  animation-iteration-count: infinite;
+  left: ${props => props.left}%;
+`;
+
+const DollarRain = () => {
+  const [dollars, setDollars] = useState([]);
 
   useEffect(() => {
-    axios.get('/data/artists_nominations_genres_chatgpt.csv').then(response => {
-      Papa.parse(response.data, {
-        header: true,
-        complete: function (results) {
-          const validData = results.data.filter(row => row.Artist);
-          setSongData(validData);
-        }
+    const newDollars = [];
+    for (let i = 0; i < 100; i++) {
+      newDollars.push({
+        left: Math.random() * 100, // Random position from left
+        delay: Math.random() * 5 // Random animation start delay
       });
-    });
+    }
+    setDollars(newDollars);
   }, []);
 
 
+
+  const DraggableImage = ({ src }) => {
+    const [props, api] = useSpring(() => ({
+      x: 0,
+      y: 0,
+      scale: 1
+    }))
+    const bind = useDrag(({ event, active, movement: [x, y] }) => {
+      // Prevents default on all devices and stop event propagation on touch devices
+      event.preventDefault()
+      if ('ontouchstart' in window) {
+        event.stopPropagation()
+      }
+
+      api.start({
+        x: active ? x : 0,
+        y: active ? y : 0,
+        scale: active ? 1.4 : 1,
+        immediate: (k) => k !== 'scale' && active
+      })
+    })
+
+    // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
+    return (
+      <animated.img
+        src={src}
+        {...bind()}
+        style={props}
+        className={"draggable-mobile cursor-grab active:cursor-grabbing animate-bounce hover:animate-spin active:animate-none"}
+      />
+    )
+  }
+
+
   return (
-    <div className={`overflow-y-auto hide-scrollbar overflow-x-hidden flex flex-col min-h-[96vh] rounded-lg backdrop-blur-lg bg-white/10 items-center my-[2vh] mx-[1vw] ${inter.className}`}>
-      <PageChanger currentPage="Awards winners" prevPage="page_5" nextPage={null} />
+    <div style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
+      {dollars.map((dollar, i) => (
+        <Dollar key={i} left={dollar.left} delay={dollar.delay} className='text-xl z-[30]'>💸</Dollar>
+      ))}
 
-      <div className="flex h-[60vh] w-[80vw] flex-col flex-wrap md:flex-row justify-between md:space-x-4 md:flex-nowrap">
-        <div className="md:w-1/4 md:max-w-[20rem] grow bg-white/40 rounded-lg mt-4 shadow-lg p-4 ">
+      <div className='absolute left-[50vw] top-6'>
+      <Link href={`/`}>
+        <IconButton>
+          <ReplayIcon style={{ color: "#8439FE" }} />
+        </IconButton>
+        </Link>
+      </div>
 
-          <div className="flex flex-col w-full items-center">
-            <div onClick={() => setSelectedAward("Total Awards")}
-              className={`px-2 py-2 w-full mt-6 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
-${selectedAward === 'Total Awards' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}> Total Awards </div>
+      <h1 className='absolute left-[50vw] top-[30rem] text-3xl text-white font-bold animate-spin hover:animate-bounce hover:text-6xl cursor-default'>
+          MERCI
+      </h1>
+      <div className='absolute left-[16vw] md:left-[14vw] top-[13rem] max-w-[12rem] text-md p-1 bg-white/40 shadow-lg rounded-lg'>
+        <p>Clémence Millet</p>
+        <p>Stagiaire M1</p>
+        <p>ESILV</p>
+      </div>
+      <div className='absolute left-[10vw] top-[10rem] max-w-[14rem] hover:z-40'>
+        <Card>
+          <DraggableImage src="/clemence_thug.png" />
+        </Card>
 
-            <div onClick={() => setSelectedAward("Total Nominations")}
-              className={`px-2 py-2 w-full mt-6 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
-${selectedAward === 'Total Nominations' ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}> Total Nominations </div>
+      </div>
+
+      <div className='absolute right-[9vw] md:right-[12vw] top-[18rem] text-md p-1 bg-white/40 shadow-lg rounded-lg'>
+        <p>Jérémy Gourdeau</p>
+        <p>Ex stagiaire</p>
+        <p>Ex ESILV</p>
+      </div>
+      <div className='absolute right-[2vw] md:right-[10vw] top-[15rem] max-w-[12rem] z-20 hover:z-30'>
+        <Card className='absolute z-20'>
+          <DraggableImage src="/jeremy_thug.png" />
+        </Card>
 
 
-            <div onClick={() => setSelectedAward("UK number 1's")}
-              className={`px-2 py-2 w-full mt-6 text-center grow rounded-full text-sm font-bold hover:cursor-pointer ease-in duration-100 border border-custom-purple 
-${selectedAward === "UK number 1's" ? "hover:bg-custom-purple/90 bg-custom-purple text-white" : "text-custom-purple bg-white hover:bg-custom-purple hover:text-white"}`}> Total UK number 1's </div>
-          </div>
-
-          <div className="flex flex-col gap-y-2 mt-6">
-            <h2 className="font-bold text-custom-purple mb-2">Top 5 artists</h2>
-            {songData.sort((a, b) => b[selectedAward] - a[selectedAward]).slice(0,5).map((name) => (
-              <div key={name.Artist} className="flex flex-row cursor-default justify-between items-center gap-x-2 transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-105">
-                <p  className="rounded-full  hover:bg-white bg-white/40 p-2 w-full overflow-auto  whitespace-nowrap hide-scrollbar">{name.Artist}</p>
-                <p className="rounded-full bg-yellow-200 hover:bg-yellow-100 p-2">{name[selectedAward]}</p>
-              </div>
-            ))}
-          </div>
-
-
-
-        </div>
-        <div className="md:w-3/4 grow md:max-w-[90rem] bg-white/40 rounded-lg mt-4 shadow-lg p-4 relative">
-          <SunBurst trigger={trigger} data={songData} awards_key={selectedAward} />
-
-          <div className="absolute top-2 right-2">
-            <IconButton onClick={() => setTrigger(!trigger)}>
-              <AutoFixHighIcon style={{ color: "#8439FE" }} />
-            </IconButton>
-          </div>
-        </div>
       </div>
 
     </div>
   );
-};
+}
 
-export default Page_5;
+export default DollarRain;

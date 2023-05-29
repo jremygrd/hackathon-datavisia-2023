@@ -31,7 +31,7 @@ export default class EChartsGraph extends React.Component {
         links.push({ source: 'Node 100', target: 'Node 1' });
 
 
-        const categories = ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other'];
+        const categories = ['R&B', 'WebGL', 'SVG', 'CSS', 'Other'];
 
         return {
             legend: {
